@@ -40,12 +40,35 @@ export default function AboutPage() {
             viajante, sozinhos, em família ou em grupo.
           </p>
         </div>
-        <div className="relative h-72 overflow-hidden rounded-2xl sm:h-96">
+        <div className="grid h-72 grid-cols-2 gap-3 sm:h-96">
+          <div className="relative overflow-hidden rounded-2xl">
+            <Image
+              src="https://d3hrj27b4bz3ky.cloudfront.net/webp/large/116953ea1-13df-44f1-b20e-0d9f9be5b00d"
+              alt="Ônibus turístico em Dublin"
+              fill
+              sizes="25vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="relative overflow-hidden rounded-2xl">
+            <Image
+              src="https://d3hrj27b4bz3ky.cloudfront.net/webp/large/2feb0ca7a-b7f0-448b-abbc-209f45b0dc2f"
+              alt="Pontos turísticos de Dublin"
+              fill
+              sizes="25vw"
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="container-page">
+        <div className="relative h-56 overflow-hidden rounded-2xl sm:h-80">
           <Image
-            src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=1200&auto=format&fit=crop"
-            alt="Ônibus turístico em Dublin"
+            src="https://d3hrj27b4bz3ky.cloudfront.net/webp/large/342043978-ec33-4e69-be06-6d2df9b7b1a7"
+            alt="Dublin vista panorâmica"
             fill
-            sizes="(min-width: 1024px) 50vw, 100vw"
+            sizes="100vw"
             className="object-cover"
           />
         </div>

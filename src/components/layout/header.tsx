@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, Globe, Bus } from "lucide-react";
+import Image from "next/image";
+import { Menu, X, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
@@ -21,13 +22,15 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/5">
       <div className="container-page flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 font-extrabold text-lg">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-white">
-            <Bus className="h-5 w-5" />
-          </span>
-          <span>
-            City <span className="text-primary">Sightseeing</span> Dublin
-          </span>
+        <Link href="/" className="flex items-center gap-2">
+          <Image
+            src="https://bucket-static-files.city-sightseeing.com/static-images/webp/logo-city-sightseeing.png"
+            alt="City Sightseeing Dublin"
+            width={180}
+            height={44}
+            priority
+            className="h-10 w-auto"
+          />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-6 text-sm font-medium">

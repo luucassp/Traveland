@@ -23,6 +23,17 @@ export type Tour = {
   reviews: Review[];
 };
 
+const CDN_HOHO_BUS =
+  "https://d2i7eq829tbbje.cloudfront.net/webp/Dublin-HOHO-main-pic1_P_60_70975efe-3076-4f53-a4de-8dd57650bcdc";
+const CDN_RIVER_CRUISE =
+  "https://d2i7eq829tbbje.cloudfront.net/webp/tmp_1600072867800_P_3216_cc4055f5-609d-47b7-9db8-7672cf18e432";
+const CDN_NIGHT_TOUR =
+  "https://d2i7eq829tbbje.cloudfront.net/webp/Dublin%20Night%20Tour%20Card_P_4791_972dc684-9687-4e47-b7f8-31f4618bab76";
+const CDN_HOWTH_CLIFFS =
+  "https://d2i7eq829tbbje.cloudfront.net/webp/Howth%20Cliffs%20Card_P_4792_c6af2722-e228-4f6b-8353-67f5b6e74e8f";
+const CDN_CLIFFS_OF_MOHER =
+  "https://d2i7eq829tbbje.cloudfront.net/webp/cliffs0_P_4496_5c2a2771-696a-42b1-b79d-a34b0fb5c89f";
+
 export const tours: Tour[] = [
   {
     slug: "bus-tour",
@@ -30,10 +41,9 @@ export const tours: Tour[] = [
     tagline: "A melhor forma de conhecer Dublin no seu próprio ritmo",
     description:
       "Suba e desça quantas vezes quiser em qualquer uma das paradas espalhadas pelos principais pontos turísticos de Dublin. Ônibus open-top com áudio guia em 10 idiomas.",
-    image:
-      "https://images.unsplash.com/photo-1549918864-48ac978761a4?q=80&w=1600&auto=format&fit=crop",
+    image: CDN_HOHO_BUS,
     gallery: [
-      "https://images.unsplash.com/photo-1549918864-48ac978761a4?q=80&w=1600&auto=format&fit=crop",
+      CDN_HOHO_BUS,
       "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=1600&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1577334928618-7b1907b9b059?q=80&w=1600&auto=format&fit=crop",
     ],
@@ -83,10 +93,9 @@ export const tours: Tour[] = [
     tagline: "Pedale pelos parques e ruas históricas com um guia local",
     description:
       "Um tour guiado de bicicleta pelos principais bairros e parques de Dublin, com paradas para fotos e histórias sobre a cidade contadas por guias locais apaixonados.",
-    image:
-      "https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1600&auto=format&fit=crop",
+    image: CDN_RIVER_CRUISE,
     gallery: [
-      "https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1600&auto=format&fit=crop",
+      CDN_RIVER_CRUISE,
       "https://images.unsplash.com/photo-1485965120184-e220f721d03e?q=80&w=1600&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1471506480208-91b3a4cc78be?q=80&w=1600&auto=format&fit=crop",
     ],
@@ -135,10 +144,9 @@ export const tours: Tour[] = [
     tagline: "Falésias, frutos do mar e vistas de tirar o fôlego",
     description:
       "Saia do centro de Dublin em direção a Howth, uma charmosa vila de pescadores com trilhas costeiras espetaculares e os melhores frutos do mar da região.",
-    image:
-      "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?q=80&w=1600&auto=format&fit=crop",
+    image: CDN_HOWTH_CLIFFS,
     gallery: [
-      "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?q=80&w=1600&auto=format&fit=crop",
+      CDN_HOWTH_CLIFFS,
       "https://images.unsplash.com/photo-1518391846015-55a9cc003b25?q=80&w=1600&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?q=80&w=1600&auto=format&fit=crop",
     ],
@@ -186,10 +194,9 @@ export const tours: Tour[] = [
     tagline: "Veja a cidade se transformar sob as luzes da noite",
     description:
       "Um passeio noturno especial pelos pontos icônicos de Dublin iluminados, com paradas em mirantes e histórias sobre o lado misterioso da cidade.",
-    image:
-      "https://images.unsplash.com/photo-1551279880-b990365e6e7e?q=80&w=1600&auto=format&fit=crop",
+    image: CDN_NIGHT_TOUR,
     gallery: [
-      "https://images.unsplash.com/photo-1551279880-b990365e6e7e?q=80&w=1600&auto=format&fit=crop",
+      CDN_NIGHT_TOUR,
       "https://images.unsplash.com/photo-1519501025264-65ba15a82390?q=80&w=1600&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?q=80&w=1600&auto=format&fit=crop",
     ],
@@ -237,10 +244,9 @@ export const tours: Tour[] = [
     tagline: "A história de Dublin contada a pé, rua por rua",
     description:
       "Caminhe pelo centro histórico de Dublin com um guia especializado, descobrindo as histórias por trás dos edifícios, ruas e personagens que moldaram a cidade.",
-    image:
-      "https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?q=80&w=1600&auto=format&fit=crop",
+    image: CDN_CLIFFS_OF_MOHER,
     gallery: [
-      "https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?q=80&w=1600&auto=format&fit=crop",
+      CDN_CLIFFS_OF_MOHER,
       "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=1600&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1577334928618-7b1907b9b059?q=80&w=1600&auto=format&fit=crop",
     ],

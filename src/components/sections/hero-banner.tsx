@@ -7,7 +7,7 @@ export function HeroBanner() {
   return (
     <section className="relative isolate flex min-h-[640px] items-center overflow-hidden">
       <Image
-        src="https://images.unsplash.com/photo-1549918864-48ac978761a4?q=80&w=2000&auto=format&fit=crop"
+        src="https://d3hrj27b4bz3ky.cloudfront.net/webp/large/0cd433228-fe73-4496-a024-ec509ff7f483"
         alt="Vista aérea de Dublin"
         fill
         priority
