@@ -1,5 +1,6 @@
 import { HeroBanner } from "@/components/sections/hero-banner";
 import { TourCards } from "@/components/sections/tour-cards";
+import { PackageComparison } from "@/components/sections/package-comparison";
 import { SocialProof } from "@/components/sections/social-proof";
 import { StatsSection } from "@/components/sections/stats-section";
 import { RouteMap } from "@/components/sections/route-map";
@@ -12,6 +13,7 @@ export default function Home() {
     <>
       <HeroBanner />
       <TourCards />
+      <PackageComparison />
       <SocialProof />
       <StatsSection />
       <RouteMap />

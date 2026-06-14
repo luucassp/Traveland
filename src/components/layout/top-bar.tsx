@@ -1,20 +1,20 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Star, Tag, ShieldCheck } from "lucide-react";
+import { Award, ShieldCheck, CalendarClock } from "lucide-react";
 
-const messages = [
+const seals = [
   {
-    icon: Tag,
-    text: "Promoção: até 20% OFF reservando online hoje",
-  },
-  {
-    icon: Star,
-    text: "4.4/5 com mais de 12.000 avaliações verificadas",
+    icon: Award,
+    text: "Líder mundial em tours Hop-On Hop-Off",
   },
   {
     icon: ShieldCheck,
-    text: "Cancelamento gratuito até 24h antes do passeio",
+    text: "Cancelamento gratuito",
+  },
+  {
+    icon: CalendarClock,
+    text: "Vouchers flexíveis: válidos por 12 meses",
   },
 ];
 
@@ -23,18 +23,29 @@ export function TopBar() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((current) => (current + 1) % messages.length);
+      setIndex((current) => (current + 1) % seals.length);
     }, 4000);
     return () => clearInterval(interval);
   }, []);
 
-  const Message = messages[index];
+  const Seal = seals[index];
 
   return (
     <div className="bg-primary-dark text-white text-xs sm:text-sm">
-      <div className="container-page flex h-9 items-center justify-center gap-2 text-center">
-        <Message.icon className="h-4 w-4 shrink-0" />
-        <span className="truncate">{Message.text}</span>
+      {/* Mobile: rotaciona um selo por vez */}
+      <div className="container-page flex h-9 items-center justify-center gap-2 text-center sm:hidden">
+        <Seal.icon className="h-4 w-4 shrink-0" />
+        <span className="truncate">{Seal.text}</span>
+      </div>
+
+      {/* Desktop: três selos lado a lado */}
+      <div className="container-page hidden h-10 items-center justify-center gap-8 sm:flex">
+        {seals.map((seal) => (
+          <div key={seal.text} className="flex items-center gap-2">
+            <seal.icon className="h-4 w-4 shrink-0 text-secondary" />
+            <span className="font-medium">{seal.text}</span>
+          </div>
+        ))}
       </div>
     </div>
   );
