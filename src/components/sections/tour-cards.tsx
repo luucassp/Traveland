@@ -8,9 +8,11 @@ import { tours, tourCategories, type TourCategory } from "@/lib/tours";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
+import { useCurrency } from "@/lib/currency/context";
 
 export function TourCards() {
   const [active, setActive] = useState<TourCategory | "all">("all");
+  const { format } = useCurrency();
 
   const visibleTours = useMemo(
     () =>
@@ -63,7 +65,7 @@ export function TourCards() {
                 </div>
               )}
               <div className="absolute bottom-3 right-3 rounded-full bg-white px-3 py-1 text-sm font-bold text-primary shadow">
-                A partir de €{tour.price}
+                A partir de {format(tour.price)}
               </div>
             </div>
 
