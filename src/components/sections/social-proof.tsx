@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Star } from "lucide-react";
+import { Star, ExternalLink } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { tours } from "@/lib/tours";
 
@@ -16,15 +16,27 @@ export function SocialProof() {
           <p className="mt-3 text-text-secondary">
             Avaliações reais de quem já explorou Dublin com a gente.
           </p>
-          <div className="mt-4 flex items-center justify-center gap-3">
-            <span className="inline-flex items-center gap-1 rounded-full bg-white px-4 py-2 text-sm font-semibold shadow-sm">
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
+            <a
+              href="https://www.tripadvisor.com/Attraction_Review-g186605-City_Sightseeing_Dublin.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 rounded-full bg-white px-4 py-2 text-sm font-semibold shadow-sm transition-shadow hover:shadow-md"
+            >
               <Star className="h-4 w-4 fill-secondary text-secondary" />
               4.4/5 no Tripadvisor
-            </span>
-            <span className="inline-flex items-center gap-1 rounded-full bg-white px-4 py-2 text-sm font-semibold shadow-sm">
+              <ExternalLink className="h-3.5 w-3.5 text-text-secondary" />
+            </a>
+            <a
+              href="https://www.google.com/maps/search/City+Sightseeing+Dublin"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 rounded-full bg-white px-4 py-2 text-sm font-semibold shadow-sm transition-shadow hover:shadow-md"
+            >
               <Star className="h-4 w-4 fill-secondary text-secondary" />
               4.5/5 no Google
-            </span>
+              <ExternalLink className="h-3.5 w-3.5 text-text-secondary" />
+            </a>
           </div>
         </div>
 

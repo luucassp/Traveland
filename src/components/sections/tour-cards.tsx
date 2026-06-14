@@ -1,11 +1,23 @@
+"use client";
+
+import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Star, Clock, Languages } from "lucide-react";
-import { tours } from "@/lib/tours";
+import { tours, tourCategories, type TourCategory } from "@/lib/tours";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { cn } from "@/lib/utils";
 
 export function TourCards() {
+  const [active, setActive] = useState<TourCategory | "all">("all");
+
+  const visibleTours = useMemo(
+    () =>
+      active === "all" ? tours : tours.filter((tour) => tour.category === active),
+    [active]
+  );
+
   return (
     <section className="container-page py-16">
       <div className="mx-auto max-w-2xl text-center">
@@ -16,8 +28,26 @@ export function TourCards() {
         </p>
       </div>
 
+      {/* Filtros por categoria */}
+      <div className="mt-8 flex flex-wrap justify-center gap-2">
+        {tourCategories.map((category) => (
+          <button
+            key={category.value}
+            onClick={() => setActive(category.value)}
+            className={cn(
+              "rounded-full px-4 py-2 text-sm font-medium transition-colors",
+              active === category.value
+                ? "bg-primary text-white"
+                : "border border-black/10 text-text-secondary hover:border-primary hover:text-primary"
+            )}
+          >
+            {category.label}
+          </button>
+        ))}
+      </div>
+
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {tours.map((tour) => (
+        {visibleTours.map((tour) => (
           <Card key={tour.slug} className="group flex flex-col">
             <div className="relative h-48 w-full overflow-hidden">
               <Image

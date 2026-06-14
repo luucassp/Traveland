@@ -6,6 +6,8 @@ export type Review = {
   avatar: string;
 };
 
+export type TourCategory = "bus" | "boat" | "bike" | "walking" | "night" | "day-trip";
+
 export type Tour = {
   slug: string;
   name: string;
@@ -19,9 +21,20 @@ export type Tour = {
   rating: number;
   reviewCount: number;
   highlight?: string;
+  category: TourCategory;
   includes: string[];
   reviews: Review[];
 };
+
+export const tourCategories: { value: TourCategory | "all"; label: string }[] = [
+  { value: "all", label: "Todos" },
+  { value: "bus", label: "Ônibus" },
+  { value: "boat", label: "Barco" },
+  { value: "bike", label: "Bike" },
+  { value: "walking", label: "A pé" },
+  { value: "night", label: "Noturno" },
+  { value: "day-trip", label: "Excursões" },
+];
 
 const CDN_HOHO_BUS =
   "https://d2i7eq829tbbje.cloudfront.net/webp/Dublin-HOHO-main-pic1_P_60_70975efe-3076-4f53-a4de-8dd57650bcdc";
@@ -53,6 +66,7 @@ export const tours: Tour[] = [
     rating: 4.4,
     reviewCount: 12453,
     highlight: "Mais Popular",
+    category: "bus",
     includes: [
       "Acesso ilimitado por 24h ou 48h",
       "Áudio guia em 10 idiomas",
@@ -93,9 +107,10 @@ export const tours: Tour[] = [
     tagline: "Pedale pelos parques e ruas históricas com um guia local",
     description:
       "Um tour guiado de bicicleta pelos principais bairros e parques de Dublin, com paradas para fotos e histórias sobre a cidade contadas por guias locais apaixonados.",
-    image: CDN_RIVER_CRUISE,
+    image:
+      "https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1600&auto=format&fit=crop",
     gallery: [
-      CDN_RIVER_CRUISE,
+      "https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1600&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1485965120184-e220f721d03e?q=80&w=1600&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1471506480208-91b3a4cc78be?q=80&w=1600&auto=format&fit=crop",
     ],
@@ -105,6 +120,7 @@ export const tours: Tour[] = [
     rating: 4.7,
     reviewCount: 1820,
     highlight: "Novo",
+    category: "bike",
     includes: [
       "Bicicleta e capacete inclusos",
       "Guia local especializado",
@@ -155,6 +171,7 @@ export const tours: Tour[] = [
     languages: ["EN", "PT", "ES", "FR"],
     rating: 4.6,
     reviewCount: 945,
+    category: "day-trip",
     includes: [
       "Transporte de ida e volta",
       "Trilha guiada pelas falésias",
@@ -205,6 +222,7 @@ export const tours: Tour[] = [
     languages: ["EN", "PT", "ES"],
     rating: 4.5,
     reviewCount: 612,
+    category: "night",
     includes: [
       "Rota noturna iluminada",
       "Áudio guia em 5 idiomas",
@@ -256,6 +274,7 @@ export const tours: Tour[] = [
     rating: 4.8,
     reviewCount: 2104,
     highlight: "Inclui 1 criança grátis",
+    category: "walking",
     includes: [
       "Guia local certificado",
       "Roteiro pelo centro histórico",
@@ -284,6 +303,58 @@ export const tours: Tour[] = [
         country: "Espanha",
         rating: 5,
         comment: "Muy recomendable, el guía fue excelente y muy ameno.",
+        avatar:
+          "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&auto=format&fit=crop",
+      },
+    ],
+  },
+  {
+    slug: "river-cruise",
+    name: "Liffey River Cruise",
+    tagline: "Veja Dublin de um ângulo único, navegando pelo Rio Liffey",
+    description:
+      "Um relaxante passeio de barco pelo Rio Liffey, passando por pontes históricas e marcos icônicos de Dublin, com narração ao vivo contando a história da cidade vista da água.",
+    image: CDN_RIVER_CRUISE,
+    gallery: [
+      CDN_RIVER_CRUISE,
+      "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1534430480872-3498386e7856?q=80&w=1600&auto=format&fit=crop",
+    ],
+    price: 22,
+    duration: "45min",
+    languages: ["EN", "PT", "ES", "FR"],
+    rating: 4.7,
+    reviewCount: 1376,
+    highlight: "Experiência na água",
+    category: "boat",
+    includes: [
+      "Cruzeiro de 45min pelo Rio Liffey",
+      "Narração ao vivo em inglês",
+      "Barco coberto e aquecido",
+      "1 criança grátis por adulto pagante",
+    ],
+    reviews: [
+      {
+        name: "Patrícia Lima",
+        country: "Brasil",
+        rating: 5,
+        comment: "Ver Dublin pela água é uma perspectiva totalmente diferente, amei!",
+        avatar:
+          "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=200&auto=format&fit=crop",
+      },
+      {
+        name: "Seán Murphy",
+        country: "Irlanda",
+        rating: 5,
+        comment: "Lovely relaxing cruise, the guide's stories were brilliant.",
+        avatar:
+          "https://images.unsplash.com/photo-1500648767791-00d5a4ee9baa?q=80&w=200&auto=format&fit=crop",
+      },
+      {
+        name: "Yuki Tanaka",
+        country: "Japão",
+        rating: 4,
+        comment: "Nice short cruise with great views of the bridges.",
         avatar:
           "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&auto=format&fit=crop",
       },
