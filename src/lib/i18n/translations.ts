@@ -1,17 +1,13 @@
-export type Locale = "pt" | "en" | "es" | "fr" | "it" | "de";
+export type Locale = "en" | "pt";
 
-export const locales: Locale[] = ["pt", "en", "es", "fr", "it", "de"];
+export const locales: Locale[] = ["en", "pt"];
 
 export const localeNames: Record<Locale, string> = {
-  pt: "Português",
   en: "English",
-  es: "Español",
-  fr: "Français",
-  it: "Italiano",
-  de: "Deutsch",
+  pt: "Português",
 };
 
-export const defaultLocale: Locale = "pt";
+export const defaultLocale: Locale = "en";
 
 export const translations = {
   pt: {
@@ -81,6 +77,83 @@ export const translations = {
         button: "Quero receber",
         disclaimer: "Sem spam. Cancelamento a qualquer momento. 🔒",
       },
+    },
+    toursSection: {
+      title: "Nossos Tours",
+      subtitle:
+        "Escolha a experiência ideal para conhecer Dublin, com preços claros e tudo incluído.",
+      reviews: "avaliações",
+      cta: "Ver detalhes e reservar",
+      from: "A partir de",
+    },
+    categories: {
+      all: "Todos",
+      bus: "Ônibus",
+      boat: "Barco",
+      bike: "Bike",
+      walking: "A pé",
+      night: "Noturno",
+      dayTrip: "Excursões",
+    },
+    tourDetail: {
+      breadcrumbHome: "Home",
+      breadcrumbTours: "Tours",
+      reviews: "avaliações",
+      about: "Sobre este tour",
+      included: "O que está incluído",
+      reviewsTitle: "Avaliações",
+      related: "Outros tours recomendados",
+      from: "A partir de",
+      plansTitle: "Planos e preços",
+      mostChosen: "Mais escolhido",
+      perPerson: "/pessoa",
+      booking: {
+        from: "A partir de",
+        perAdult: "por adulto",
+        date: "Data do passeio",
+        adults: "Adultos",
+        children: "Crianças",
+        freeUnder13: "Grátis até 13 anos",
+        total: "Total",
+        bookNow: "Reservar Agora",
+        freeCancellation: "Cancelamento gratuito até 24h antes do passeio",
+        decreaseAdults: "Diminuir adultos",
+        increaseAdults: "Aumentar adultos",
+        decreaseChildren: "Diminuir crianças",
+        increaseChildren: "Aumentar crianças",
+      },
+    },
+    routeMap: {
+      title: "Mapa das Paradas",
+      subtitle:
+        "Clique em uma parada no mapa ou na lista para ver detalhes e o próximo horário.",
+      nextDeparture: "Próximo horário",
+    },
+    social: {
+      title: "O que nossos visitantes dizem",
+      subtitle: "Avaliações reais de quem já explorou Dublin com a gente.",
+      tripadvisor: "4.4/5 no Tripadvisor",
+      google: "4.5/5 no Google",
+    },
+    packagesSection: {
+      title: "Escolha a duração ideal",
+      subtitle:
+        "Compare o que está incluído em cada pacote e aproveite mais quanto mais tempo você fica.",
+      reserve: "Reservar",
+    },
+    bookingPage: {
+      title: "Reserve seu Tour",
+      subtitle:
+        "Escolha um dos nossos tours abaixo para ver os detalhes, planos e preços antes de finalizar a sua reserva.",
+      from: "A partir de",
+      seeTour: "Ver tour",
+    },
+    ticketsPage: {
+      title: "Bilhetes & Preços",
+      subtitle: "Compare nossos planos e escolha a melhor opção para a sua visita a Dublin.",
+      mostChosen: "Mais escolhido",
+      perPerson: "/pessoa",
+      choose: "Escolher",
     },
     promo: {
       title: "Oferta por tempo limitado! Termina em:",
@@ -180,6 +253,83 @@ export const translations = {
         disclaimer: "No spam. Unsubscribe anytime. 🔒",
       },
     },
+    toursSection: {
+      title: "Our Tours",
+      subtitle:
+        "Choose the ideal experience to discover Dublin, with clear pricing and everything included.",
+      reviews: "reviews",
+      cta: "View details & book",
+      from: "From",
+    },
+    categories: {
+      all: "All",
+      bus: "Bus",
+      boat: "Boat",
+      bike: "Bike",
+      walking: "Walking",
+      night: "Night",
+      dayTrip: "Day Trips",
+    },
+    tourDetail: {
+      breadcrumbHome: "Home",
+      breadcrumbTours: "Tours",
+      reviews: "reviews",
+      about: "About this tour",
+      included: "What's included",
+      reviewsTitle: "Reviews",
+      related: "Other recommended tours",
+      from: "From",
+      plansTitle: "Plans & prices",
+      mostChosen: "Most chosen",
+      perPerson: "/person",
+      booking: {
+        from: "From",
+        perAdult: "per adult",
+        date: "Tour date",
+        adults: "Adults",
+        children: "Children",
+        freeUnder13: "Free under 13",
+        total: "Total",
+        bookNow: "Book Now",
+        freeCancellation: "Free cancellation up to 24h before the tour",
+        decreaseAdults: "Decrease adults",
+        increaseAdults: "Increase adults",
+        decreaseChildren: "Decrease children",
+        increaseChildren: "Increase children",
+      },
+    },
+    routeMap: {
+      title: "Stop Map",
+      subtitle:
+        "Click a stop on the map or in the list to see details and the next departure.",
+      nextDeparture: "Next departure",
+    },
+    social: {
+      title: "What our visitors say",
+      subtitle: "Real reviews from people who have already explored Dublin with us.",
+      tripadvisor: "4.4/5 on Tripadvisor",
+      google: "4.5/5 on Google",
+    },
+    packagesSection: {
+      title: "Choose your ideal duration",
+      subtitle:
+        "Compare what's included in each package and get more value the longer you stay.",
+      reserve: "Book",
+    },
+    bookingPage: {
+      title: "Book Your Tour",
+      subtitle:
+        "Choose one of our tours below to see details, plans and prices before completing your booking.",
+      from: "From",
+      seeTour: "See tour",
+    },
+    ticketsPage: {
+      title: "Tickets & Pricing",
+      subtitle: "Compare our plans and choose the best option for your visit to Dublin.",
+      mostChosen: "Most chosen",
+      perPerson: "/person",
+      choose: "Choose",
+    },
     promo: {
       title: "Limited-time offer! Ends in:",
       days: "days",
@@ -210,398 +360,12 @@ export const translations = {
       label: "Currency",
     },
   },
-  es: {
-    topBar: {
-      seal1: "Líder mundial en tours Hop-On Hop-Off",
-      seal2: "Cancelación gratuita",
-      seal3: "Bonos flexibles: válidos durante 12 meses",
-    },
-    nav: {
-      tours: "Tours",
-      busStops: "Paradas",
-      tickets: "Entradas",
-      about: "Nosotros",
-      blog: "Blog",
-      faq: "Preguntas",
-      contact: "Contacto",
-      bookNow: "Reservar Ahora",
-    },
-    hero: {
-      ratingSuffix: "· +12.000 reseñas verificadas",
-      title: "Explora Dublín a tu propio ritmo",
-      subtitle:
-        "Tours hop-on hop-off, paseos en bicicleta, recorridos históricos a pie y mucho más. Sube y baja tantas veces como quieras en las principales atracciones de la ciudad.",
-      from: "Desde",
-      perPerson: "por persona",
-      bookNow: "Reservar Ahora",
-      seeTours: "Ver Tours",
-    },
-    home: {
-      explore: {
-        eyebrow: "Dublín a tu manera",
-        title: "¿Cómo quieres explorar la ciudad?",
-        busTitle: "Tour en Autobús",
-        busDesc: "Sube y baja cuando quieras en las 14 paradas",
-        bikeTitle: "Tour en Bicicleta",
-        bikeDesc: "Descubre los rincones escondidos pedaleando",
-        boatTitle: "Crucero por el Río",
-        boatDesc: "Mira Dublín desde un ángulo único por el Liffey",
-        from: "Desde",
-      },
-      interest: {
-        eyebrow: "Encuentra tu experiencia",
-        title: "Explora Dublín por interés",
-        history: "Historia y Cultura",
-        historyDesc: "Castillos, museos y leyendas irlandesas",
-        nature: "Naturaleza y Aire Libre",
-        natureDesc: "Acantilados, parques y costa salvaje",
-        food: "Gastronomía y Pub",
-        foodDesc: "Pubs, whiskey y cocina local",
-        night: "Dublín Nocturno",
-        nightDesc: "La ciudad a la luz de las linternas históricas",
-      },
-      stats: {
-        eyebrow: "Números que hablan por sí solos",
-        title: "Creando experiencias inolvidables en Dublín",
-        satisfied: "Clientes satisfechos",
-        recommend: "Recomiendan el tour",
-        days: "Días de operación al año",
-        stops: "Paradas por el centro de Dublín",
-      },
-      newsletter: {
-        badge: "Ofertas exclusivas para suscriptores",
-        title: "Recibe ofertas de Dublín directo en tu correo",
-        subtitle:
-          "Descuentos exclusivos, nuevos tours y consejos de viaje para aprovechar Dublín al máximo.",
-        placeholder: "Tu mejor correo",
-        button: "Quiero recibir",
-        disclaimer: "Sin spam. Cancela cuando quieras. 🔒",
-      },
-    },
-    promo: {
-      title: "¡Oferta por tiempo limitado! Termina en:",
-      days: "días",
-      hours: "horas",
-      minutes: "min",
-      seconds: "seg",
-    },
-    footer: {
-      newsletterTitle: "Recibe ofertas exclusivas",
-      newsletterText: "Consejos de Dublín y promociones de nuestros tours directo a tu correo.",
-      newsletterSuccess: "¡Suscripción confirmada! Pronto recibirás nuestras novedades.",
-      about:
-        "Explora Dublín a tu propio ritmo con nuestros tours hop-on hop-off, paseos en bicicleta, recorridos históricos a pie y mucho más.",
-      toursTitle: "Tours",
-      infoTitle: "Información",
-      contactTitle: "Contacto",
-      rights: "Todos los derechos reservados.",
-      demo: "Sitio demo — Rediseño y Modernización",
-    },
-    chat: {
-      title: "Habla con nosotros",
-      online: "En línea ahora",
-    },
-    mobileBookBar: {
-      cta: "Reservar ahora — desde",
-    },
-    currency: {
-      label: "Moneda",
-    },
-  },
-  fr: {
-    topBar: {
-      seal1: "Leader mondial des tours Hop-On Hop-Off",
-      seal2: "Annulation gratuite",
-      seal3: "Bons flexibles : valables 12 mois",
-    },
-    nav: {
-      tours: "Tours",
-      busStops: "Arrêts",
-      tickets: "Billets",
-      about: "À propos",
-      blog: "Blog",
-      faq: "FAQ",
-      contact: "Contact",
-      bookNow: "Réserver",
-    },
-    hero: {
-      ratingSuffix: "· +12 000 avis vérifiés",
-      title: "Explorez Dublin à votre rythme",
-      subtitle:
-        "Tours hop-on hop-off, balades à vélo, visites historiques à pied et bien plus. Montez et descendez autant de fois que vous le souhaitez aux principales attractions de la ville.",
-      from: "À partir de",
-      perPerson: "par personne",
-      bookNow: "Réserver",
-      seeTours: "Voir les Tours",
-    },
-    home: {
-      explore: {
-        eyebrow: "Dublin à votre façon",
-        title: "Comment voulez-vous explorer la ville ?",
-        busTitle: "Tour en Bus",
-        busDesc: "Montez et descendez à votre guise aux 14 arrêts",
-        bikeTitle: "Tour à Vélo",
-        bikeDesc: "Découvrez les coins cachés à vélo",
-        boatTitle: "Croisière sur la Rivière",
-        boatDesc: "Voyez Dublin sous un angle unique sur la Liffey",
-        from: "À partir de",
-      },
-      interest: {
-        eyebrow: "Trouvez votre expérience",
-        title: "Explorez Dublin par centre d'intérêt",
-        history: "Histoire & Culture",
-        historyDesc: "Châteaux, musées et légendes irlandaises",
-        nature: "Nature & Plein Air",
-        natureDesc: "Falaises, parcs et côte sauvage",
-        food: "Gastronomie & Pub",
-        foodDesc: "Pubs, whiskey et cuisine locale",
-        night: "Dublin la Nuit",
-        nightDesc: "La ville à la lumière des lanternes historiques",
-      },
-      stats: {
-        eyebrow: "Des chiffres qui parlent d'eux-mêmes",
-        title: "Créer des expériences inoubliables à Dublin",
-        satisfied: "Clients satisfaits",
-        recommend: "Recommandent le tour",
-        days: "Jours d'exploitation par an",
-        stops: "Arrêts dans le centre de Dublin",
-      },
-      newsletter: {
-        badge: "Offres exclusives pour les abonnés",
-        title: "Recevez les offres de Dublin directement par e-mail",
-        subtitle:
-          "Réductions exclusives, nouveaux tours et conseils de voyage pour profiter de Dublin au maximum.",
-        placeholder: "Votre meilleure adresse e-mail",
-        button: "Je m'abonne",
-        disclaimer: "Pas de spam. Désabonnement à tout moment. 🔒",
-      },
-    },
-    promo: {
-      title: "Offre à durée limitée ! Se termine dans :",
-      days: "jours",
-      hours: "heures",
-      minutes: "min",
-      seconds: "sec",
-    },
-    footer: {
-      newsletterTitle: "Recevez des offres exclusives",
-      newsletterText: "Astuces sur Dublin et promotions de nos tours directement dans votre boîte mail.",
-      newsletterSuccess: "Inscription confirmée ! Vous recevrez bientôt nos nouveautés.",
-      about:
-        "Explorez Dublin à votre rythme avec nos tours hop-on hop-off, balades à vélo, visites historiques à pied et bien plus.",
-      toursTitle: "Tours",
-      infoTitle: "Informations",
-      contactTitle: "Contact",
-      rights: "Tous droits réservés.",
-      demo: "Site de démonstration — Refonte & Modernisation",
-    },
-    chat: {
-      title: "Discutez avec nous",
-      online: "En ligne",
-    },
-    mobileBookBar: {
-      cta: "Réserver maintenant — à partir de",
-    },
-    currency: {
-      label: "Devise",
-    },
-  },
-  it: {
-    topBar: {
-      seal1: "Leader mondiale nei tour Hop-On Hop-Off",
-      seal2: "Cancellazione gratuita",
-      seal3: "Voucher flessibili: validi 12 mesi",
-    },
-    nav: {
-      tours: "Tour",
-      busStops: "Fermate",
-      tickets: "Biglietti",
-      about: "Chi siamo",
-      blog: "Blog",
-      faq: "FAQ",
-      contact: "Contatti",
-      bookNow: "Prenota Ora",
-    },
-    hero: {
-      ratingSuffix: "· +12.000 recensioni verificate",
-      title: "Esplora Dublino al tuo ritmo",
-      subtitle:
-        "Tour hop-on hop-off, gite in bici, passeggiate storiche e molto altro. Sali e scendi quante volte vuoi nelle principali attrazioni della città.",
-      from: "A partire da",
-      perPerson: "a persona",
-      bookNow: "Prenota Ora",
-      seeTours: "Vedi i Tour",
-    },
-    home: {
-      explore: {
-        eyebrow: "Dublino a modo tuo",
-        title: "Come vuoi esplorare la città?",
-        busTitle: "Tour in Autobus",
-        busDesc: "Sali e scendi quando vuoi alle 14 fermate",
-        bikeTitle: "Tour in Bicicletta",
-        bikeDesc: "Scopri gli angoli nascosti pedalando",
-        boatTitle: "Crociera sul Fiume",
-        boatDesc: "Guarda Dublino da un'angolazione unica sul Liffey",
-        from: "A partire da",
-      },
-      interest: {
-        eyebrow: "Trova la tua esperienza",
-        title: "Esplora Dublino per interesse",
-        history: "Storia e Cultura",
-        historyDesc: "Castelli, musei e leggende irlandesi",
-        nature: "Natura e Aria Aperta",
-        natureDesc: "Scogliere, parchi e costa selvaggia",
-        food: "Gastronomia e Pub",
-        foodDesc: "Pub, whiskey e cucina locale",
-        night: "Dublino di Notte",
-        nightDesc: "La città alla luce dei lampioni storici",
-      },
-      stats: {
-        eyebrow: "Numeri che parlano da soli",
-        title: "Creiamo esperienze indimenticabili a Dublino",
-        satisfied: "Clienti satisfatti",
-        recommend: "Raccomandano il tour",
-        days: "Giorni di operatività all'anno",
-        stops: "Fermate nel centro di Dublino",
-      },
-      newsletter: {
-        badge: "Offerte esclusive per gli abbonati",
-        title: "Ricevi le offerte di Dublino direttamente nella tua email",
-        subtitle:
-          "Sconti esclusivi, nuovi tour e consigli di viaggio per goderti Dublino al massimo.",
-        placeholder: "La tua email migliore",
-        button: "Voglio riceverle",
-        disclaimer: "Niente spam. Annulla in qualsiasi momento. 🔒",
-      },
-    },
-    promo: {
-      title: "Offerta a tempo limitato! Termina in:",
-      days: "giorni",
-      hours: "ore",
-      minutes: "min",
-      seconds: "sec",
-    },
-    footer: {
-      newsletterTitle: "Ricevi offerte esclusive",
-      newsletterText: "Consigli su Dublino e promozioni dei nostri tour direttamente nella tua email.",
-      newsletterSuccess: "Iscrizione confermata! Riceverai presto le nostre novità.",
-      about:
-        "Esplora Dublino al tuo ritmo con i nostri tour hop-on hop-off, gite in bici, passeggiate storiche e molto altro.",
-      toursTitle: "Tour",
-      infoTitle: "Informazioni",
-      contactTitle: "Contatti",
-      rights: "Tutti i diritti riservati.",
-      demo: "Sito demo — Redesign & Modernizzazione",
-    },
-    chat: {
-      title: "Parla con noi",
-      online: "Online ora",
-    },
-    mobileBookBar: {
-      cta: "Prenota ora — a partire da",
-    },
-    currency: {
-      label: "Valuta",
-    },
-  },
-  de: {
-    topBar: {
-      seal1: "Weltweit führend bei Hop-On Hop-Off-Touren",
-      seal2: "Kostenlose Stornierung",
-      seal3: "Flexible Gutscheine: 12 Monate gültig",
-    },
-    nav: {
-      tours: "Touren",
-      busStops: "Haltestellen",
-      tickets: "Tickets",
-      about: "Über uns",
-      blog: "Blog",
-      faq: "FAQ",
-      contact: "Kontakt",
-      bookNow: "Jetzt Buchen",
-    },
-    hero: {
-      ratingSuffix: "· +12.000 verifizierte Bewertungen",
-      title: "Erlebe Dublin in deinem eigenen Tempo",
-      subtitle:
-        "Hop-On Hop-Off-Touren, Radtouren, historische Spaziergänge und mehr. Steige so oft du möchtest an den wichtigsten Attraktionen der Stadt ein und aus.",
-      from: "Ab",
-      perPerson: "pro Person",
-      bookNow: "Jetzt Buchen",
-      seeTours: "Touren Ansehen",
-    },
-    home: {
-      explore: {
-        eyebrow: "Dublin nach deinen Wünschen",
-        title: "Wie möchtest du die Stadt erleben?",
-        busTitle: "Bus-Tour",
-        busDesc: "Steige an den 14 Haltestellen ein und aus, wann du willst",
-        bikeTitle: "Fahrrad-Tour",
-        bikeDesc: "Entdecke versteckte Ecken mit dem Fahrrad",
-        boatTitle: "Flusskreuzfahrt",
-        boatDesc: "Erlebe Dublin aus einer einzigartigen Perspektive auf der Liffey",
-        from: "Ab",
-      },
-      interest: {
-        eyebrow: "Finde dein Erlebnis",
-        title: "Entdecke Dublin nach Interesse",
-        history: "Geschichte & Kultur",
-        historyDesc: "Burgen, Museen und irische Legenden",
-        nature: "Natur & Outdoor",
-        natureDesc: "Klippen, Parks und wilde Küste",
-        food: "Gastronomie & Pubs",
-        foodDesc: "Pubs, Whiskey und lokale Küche",
-        night: "Dublin bei Nacht",
-        nightDesc: "Die Stadt im Licht der historischen Laternen",
-      },
-      stats: {
-        eyebrow: "Zahlen, die für sich sprechen",
-        title: "Unvergessliche Erlebnisse in Dublin",
-        satisfied: "Zufriedene Kunden",
-        recommend: "Empfehlen die Tour",
-        days: "Betriebstage pro Jahr",
-        stops: "Haltestellen im Zentrum von Dublin",
-      },
-      newsletter: {
-        badge: "Exklusive Angebote für Abonnenten",
-        title: "Erhalte Dublin-Angebote direkt in dein Postfach",
-        subtitle:
-          "Exklusive Rabatte, neue Touren und Reisetipps, um Dublin optimal zu genießen.",
-        placeholder: "Deine beste E-Mail-Adresse",
-        button: "Jetzt anmelden",
-        disclaimer: "Kein Spam. Jederzeit kündbar. 🔒",
-      },
-    },
-    promo: {
-      title: "Zeitlich begrenztes Angebot! Endet in:",
-      days: "Tage",
-      hours: "Std",
-      minutes: "Min",
-      seconds: "Sek",
-    },
-    footer: {
-      newsletterTitle: "Exklusive Angebote erhalten",
-      newsletterText: "Dublin-Tipps und Angebote für unsere Touren direkt in dein Postfach.",
-      newsletterSuccess: "Anmeldung bestätigt! Du erhältst bald unsere Neuigkeiten.",
-      about:
-        "Erlebe Dublin in deinem eigenen Tempo mit unseren Hop-On Hop-Off-Touren, Radtouren, historischen Spaziergängen und mehr.",
-      toursTitle: "Touren",
-      infoTitle: "Informationen",
-      contactTitle: "Kontakt",
-      rights: "Alle Rechte vorbehalten.",
-      demo: "Demo-Website — Redesign & Modernisierung",
-    },
-    chat: {
-      title: "Sprich mit uns",
-      online: "Jetzt online",
-    },
-    mobileBookBar: {
-      cta: "Jetzt buchen — ab",
-    },
-    currency: {
-      label: "Währung",
-    },
-  },
 } satisfies Record<Locale, unknown>;
 
 export type TranslationShape = typeof translations.pt;
+
+export type Localized<T> = { en: T; pt: T };
+
+export function localize<T>(value: Localized<T>, locale: Locale): T {
+  return value[locale];
+}

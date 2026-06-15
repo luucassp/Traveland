@@ -1,21 +1,23 @@
+"use client";
+
 import Image from "next/image";
 import { Star, ExternalLink } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { tours } from "@/lib/tours";
+import { useLanguage } from "@/lib/i18n/context";
+import { localize } from "@/lib/i18n/translations";
 
 const testimonials = tours.flatMap((tour) => tour.reviews).slice(0, 3);
 
 export function SocialProof() {
+  const { locale, t } = useLanguage();
+
   return (
     <section className="bg-[#fff5f5] py-16">
       <div className="container-page">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-extrabold sm:text-4xl">
-            O que nossos visitantes dizem
-          </h2>
-          <p className="mt-3 text-text-secondary">
-            Avaliações reais de quem já explorou Dublin com a gente.
-          </p>
+          <h2 className="text-3xl font-extrabold sm:text-4xl">{t.social.title}</h2>
+          <p className="mt-3 text-text-secondary">{t.social.subtitle}</p>
           <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
             <a
               href="https://www.tripadvisor.com/Attraction_Review-g186605-City_Sightseeing_Dublin.html"
@@ -24,7 +26,7 @@ export function SocialProof() {
               className="inline-flex items-center gap-1 rounded-full bg-white px-4 py-2 text-sm font-semibold shadow-sm transition-shadow hover:shadow-md"
             >
               <Star className="h-4 w-4 fill-secondary text-secondary" />
-              4.4/5 no Tripadvisor
+              {t.social.tripadvisor}
               <ExternalLink className="h-3.5 w-3.5 text-text-secondary" />
             </a>
             <a
@@ -34,7 +36,7 @@ export function SocialProof() {
               className="inline-flex items-center gap-1 rounded-full bg-white px-4 py-2 text-sm font-semibold shadow-sm transition-shadow hover:shadow-md"
             >
               <Star className="h-4 w-4 fill-secondary text-secondary" />
-              4.5/5 no Google
+              {t.social.google}
               <ExternalLink className="h-3.5 w-3.5 text-text-secondary" />
             </a>
           </div>
@@ -66,7 +68,7 @@ export function SocialProof() {
                   ))}
                 </div>
                 <p className="mt-3 text-sm text-text-secondary leading-relaxed">
-                  &ldquo;{review.comment}&rdquo;
+                  &ldquo;{localize(review.comment, locale)}&rdquo;
                 </p>
               </CardContent>
             </Card>

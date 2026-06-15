@@ -4,6 +4,8 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { busStops } from "@/lib/tours";
+import { useLanguage } from "@/lib/i18n/context";
+import { localize } from "@/lib/i18n/translations";
 
 const stopIcon = L.divIcon({
   className: "",
@@ -14,6 +16,7 @@ const stopIcon = L.divIcon({
 
 export function LeafletMap() {
   const center: [number, number] = [53.347, -6.273];
+  const { locale, t } = useLanguage();
 
   return (
     <MapContainer
@@ -33,9 +36,9 @@ export function LeafletMap() {
               {stop.number}. {stop.name}
             </strong>
             <br />
-            {stop.description}
+            {localize(stop.description, locale)}
             <br />
-            Próximo horário: {stop.nextDeparture}
+            {t.routeMap.nextDeparture}: {stop.nextDeparture}
           </Popup>
         </Marker>
       ))}

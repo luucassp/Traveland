@@ -1,15 +1,19 @@
+"use client";
+
 import Image from "next/image";
 import { busStops } from "@/lib/tours";
 import { LeafletMap } from "@/components/sections/leaflet-map-loader";
+import { useLanguage } from "@/lib/i18n/context";
+import { localize } from "@/lib/i18n/translations";
 
 export function RouteMap() {
+  const { locale, t } = useLanguage();
+
   return (
     <section className="container-page py-16">
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-3xl font-extrabold sm:text-4xl">Mapa das Paradas</h2>
-        <p className="mt-3 text-text-secondary">
-          Clique em uma parada no mapa ou na lista para ver detalhes e o próximo horário.
-        </p>
+        <h2 className="text-3xl font-extrabold sm:text-4xl">{t.routeMap.title}</h2>
+        <p className="mt-3 text-text-secondary">{t.routeMap.subtitle}</p>
       </div>
 
       <div className="mt-10 grid gap-6 lg:grid-cols-[3fr_2fr]">
@@ -32,10 +36,10 @@ export function RouteMap() {
               <div className="flex-1">
                 <p className="font-semibold">{stop.name}</p>
                 <p className="text-sm text-text-secondary line-clamp-2">
-                  {stop.description}
+                  {localize(stop.description, locale)}
                 </p>
                 <p className="mt-1 text-xs font-medium text-primary">
-                  Próximo horário: {stop.nextDeparture}
+                  {t.routeMap.nextDeparture}: {stop.nextDeparture}
                 </p>
               </div>
             </div>

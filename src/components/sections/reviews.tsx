@@ -1,12 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import { Star } from "lucide-react";
 import type { Review } from "@/lib/tours";
 import { Card, CardContent } from "@/components/ui/card";
+import { useLanguage } from "@/lib/i18n/context";
+import { localize } from "@/lib/i18n/translations";
 
 export function Reviews({ reviews }: { reviews: Review[] }) {
+  const { locale, t } = useLanguage();
+
   return (
     <div>
-      <h2 className="text-xl font-bold">Avaliações</h2>
+      <h2 className="text-xl font-bold">{t.tourDetail.reviewsTitle}</h2>
       <div className="mt-4 grid gap-4 sm:grid-cols-3">
         {reviews.map((review) => (
           <Card key={review.name}>
@@ -33,7 +39,7 @@ export function Reviews({ reviews }: { reviews: Review[] }) {
                 ))}
               </div>
               <p className="mt-2 text-sm text-text-secondary leading-relaxed">
-                &ldquo;{review.comment}&rdquo;
+                &ldquo;{localize(review.comment, locale)}&rdquo;
               </p>
             </CardContent>
           </Card>
