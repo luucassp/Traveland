@@ -1,31 +1,34 @@
-import { Ticket, MapPin, Bus as BusIcon } from "lucide-react";
+"use client";
 
-const steps = [
-  {
-    icon: Ticket,
-    title: "1. Compre seu bilhete",
-    description: "Escolha o tour ideal e reserve online em poucos cliques, com confirmação imediata.",
-  },
-  {
-    icon: MapPin,
-    title: "2. Embarque em qualquer parada",
-    description: "Vá até qualquer uma das 14 paradas espalhadas pelo centro de Dublin.",
-  },
-  {
-    icon: BusIcon,
-    title: "3. Suba e desça quantas vezes quiser",
-    description: "Explore as atrações no seu próprio ritmo durante 24h ou 48h.",
-  },
-];
+import { Ticket, MapPin, Bus as BusIcon } from "lucide-react";
+import { useLanguage } from "@/lib/i18n/context";
 
 export function HowItWorks() {
+  const { t } = useLanguage();
+
+  const steps = [
+    {
+      icon: Ticket,
+      title: t.howItWorks.step1Title,
+      description: t.howItWorks.step1Desc,
+    },
+    {
+      icon: MapPin,
+      title: t.howItWorks.step2Title,
+      description: t.howItWorks.step2Desc,
+    },
+    {
+      icon: BusIcon,
+      title: t.howItWorks.step3Title,
+      description: t.howItWorks.step3Desc,
+    },
+  ];
+
   return (
     <section className="container-page py-16">
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-3xl font-extrabold sm:text-4xl">Como funciona</h2>
-        <p className="mt-3 text-text-secondary">
-          Simples, rápido e sem complicação. Veja como aproveitar Dublin em 3 passos.
-        </p>
+        <h2 className="text-3xl font-extrabold sm:text-4xl">{t.howItWorks.title}</h2>
+        <p className="mt-3 text-text-secondary">{t.howItWorks.subtitle}</p>
       </div>
 
       <div className="mt-10 grid gap-8 sm:grid-cols-3">

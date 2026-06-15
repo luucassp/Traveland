@@ -4,12 +4,6 @@ import { useState } from "react";
 import { MessageCircle, X, Send } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/context";
 
-const quickReplies = [
-  "Como funciona o tour?",
-  "Posso cancelar a reserva?",
-  "Qual o idioma do guia?",
-];
-
 export function ChatWidget() {
   const [open, setOpen] = useState(false);
   const { t } = useLanguage();
@@ -19,7 +13,7 @@ export function ChatWidget() {
       {/* Botão flutuante — fica acima da barra de reserva no mobile */}
       <button
         onClick={() => setOpen((value) => !value)}
-        aria-label={open ? "Fechar chat" : "Abrir chat ao vivo"}
+        aria-label={open ? t.chat.closeAria : t.chat.openAria}
         className="fixed bottom-20 right-4 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white shadow-lg transition-transform hover:scale-105 sm:bottom-6 sm:right-6"
       >
         {open ? <X className="h-6 w-6" /> : <MessageCircle className="h-6 w-6" />}
@@ -40,17 +34,17 @@ export function ChatWidget() {
             </div>
             <div>
               <p className="text-sm font-semibold">{t.chat.title}</p>
-              <p className="text-xs text-white/80">{t.chat.online} · responde em minutos</p>
+              <p className="text-xs text-white/80">{t.chat.online} · {t.chat.replyTime}</p>
             </div>
           </div>
 
           <div className="flex flex-col gap-3 bg-[#fafafa] p-4">
             <div className="max-w-[85%] rounded-2xl rounded-tl-sm bg-white px-3 py-2 text-sm shadow-sm">
-              Olá! 👋 Como podemos ajudar com a sua visita a Dublin?
+              {t.chat.greeting}
             </div>
 
             <div className="flex flex-wrap gap-2">
-              {quickReplies.map((reply) => (
+              {t.chat.quickReplies.map((reply) => (
                 <button
                   key={reply}
                   className="rounded-full border border-primary/30 bg-white px-3 py-1.5 text-xs font-medium text-primary transition-colors hover:bg-primary/5"
@@ -64,11 +58,11 @@ export function ChatWidget() {
           <div className="flex items-center gap-2 border-t border-black/10 p-3">
             <input
               type="text"
-              placeholder="Escreva sua mensagem..."
+              placeholder={t.chat.placeholder}
               className="flex-1 rounded-full border border-black/10 px-3 py-2 text-sm focus:border-primary focus:outline-none"
             />
             <button
-              aria-label="Enviar mensagem"
+              aria-label={t.chat.sendAria}
               className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-white hover:bg-primary-dark"
             >
               <Send className="h-4 w-4" />

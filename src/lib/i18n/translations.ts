@@ -29,6 +29,8 @@ export const translations = {
       faq: "FAQ",
       contact: "Contato",
       bookNow: "Reservar Agora",
+      openMenu: "Abrir menu",
+      closeMenu: "Fechar menu",
     },
     hero: {
       ratingSuffix: "· +12.000 avaliações verificadas",
@@ -181,12 +183,44 @@ export const translations = {
     chat: {
       title: "Fale com a gente",
       online: "Online agora",
+      replyTime: "responde em minutos",
+      greeting: "Olá! 👋 Como podemos ajudar com a sua visita a Dublin?",
+      placeholder: "Escreva sua mensagem...",
+      openAria: "Abrir chat ao vivo",
+      closeAria: "Fechar chat",
+      sendAria: "Enviar mensagem",
+      quickReplies: [
+        "Como funciona o tour?",
+        "Posso cancelar a reserva?",
+        "Qual o idioma do guia?",
+      ],
     },
     mobileBookBar: {
       cta: "Reservar agora — a partir de",
     },
     currency: {
       label: "Moeda",
+    },
+    howItWorks: {
+      title: "Como funciona",
+      subtitle: "Simples, rápido e sem complicação. Veja como aproveitar Dublin em 3 passos.",
+      step1Title: "1. Compre seu bilhete",
+      step1Desc: "Escolha o tour ideal e reserve online em poucos cliques, com confirmação imediata.",
+      step2Title: "2. Embarque em qualquer parada",
+      step2Desc: "Vá até qualquer uma das 14 paradas espalhadas pelo centro de Dublin.",
+      step3Title: "3. Suba e desça quantas vezes quiser",
+      step3Desc: "Explore as atrações no seu próprio ritmo durante 24h ou 48h.",
+    },
+    contactBar: {
+      startingPoint: "Ponto de partida",
+      startingPointAddress: "Upper O'Connell Street, Dublin 1",
+      support: "Atendimento",
+      supportHours: "+353 1 234 5678 · 08h às 19h",
+      email: "E-mail",
+    },
+    faqSection: {
+      title: "Perguntas Frequentes",
+      subtitle: "Tire suas dúvidas antes de reservar seu tour por Dublin.",
     },
   },
   en: {
@@ -204,6 +238,8 @@ export const translations = {
       faq: "FAQ",
       contact: "Contact",
       bookNow: "Book Now",
+      openMenu: "Open menu",
+      closeMenu: "Close menu",
     },
     hero: {
       ratingSuffix: "· +12,000 verified reviews",
@@ -356,12 +392,44 @@ export const translations = {
     chat: {
       title: "Chat with us",
       online: "Online now",
+      replyTime: "replies in minutes",
+      greeting: "Hi! 👋 How can we help with your visit to Dublin?",
+      placeholder: "Type your message...",
+      openAria: "Open live chat",
+      closeAria: "Close chat",
+      sendAria: "Send message",
+      quickReplies: [
+        "How does the tour work?",
+        "Can I cancel my booking?",
+        "What language is the guide?",
+      ],
     },
     mobileBookBar: {
       cta: "Book now — from",
     },
     currency: {
       label: "Currency",
+    },
+    howItWorks: {
+      title: "How it works",
+      subtitle: "Simple, fast and hassle-free. Here's how to enjoy Dublin in 3 steps.",
+      step1Title: "1. Buy your ticket",
+      step1Desc: "Choose the ideal tour and book online in a few clicks, with instant confirmation.",
+      step2Title: "2. Hop on at any stop",
+      step2Desc: "Head to any of the 14 stops located across Dublin city centre.",
+      step3Title: "3. Hop on and off as many times as you like",
+      step3Desc: "Explore the attractions at your own pace for 24h or 48h.",
+    },
+    contactBar: {
+      startingPoint: "Starting point",
+      startingPointAddress: "Upper O'Connell Street, Dublin 1",
+      support: "Support",
+      supportHours: "+353 1 234 5678 · 8am to 7pm",
+      email: "Email",
+    },
+    faqSection: {
+      title: "Frequently Asked Questions",
+      subtitle: "Get your questions answered before booking your Dublin tour.",
     },
   },
   es: {
@@ -379,6 +447,8 @@ export const translations = {
       faq: "FAQ",
       contact: "Contacto",
       bookNow: "Reservar Ahora",
+      openMenu: "Abrir menú",
+      closeMenu: "Cerrar menú",
     },
     hero: {
       ratingSuffix: "· +12.000 reseñas verificadas",
@@ -531,12 +601,44 @@ export const translations = {
     chat: {
       title: "Habla con nosotros",
       online: "En línea ahora",
+      replyTime: "responde en minutos",
+      greeting: "¡Hola! 👋 ¿Cómo podemos ayudarte con tu visita a Dublín?",
+      placeholder: "Escribe tu mensaje...",
+      openAria: "Abrir chat en vivo",
+      closeAria: "Cerrar chat",
+      sendAria: "Enviar mensaje",
+      quickReplies: [
+        "¿Cómo funciona el tour?",
+        "¿Puedo cancelar mi reserva?",
+        "¿En qué idioma está la guía?",
+      ],
     },
     mobileBookBar: {
       cta: "Reservar ahora — desde",
     },
     currency: {
       label: "Moneda",
+    },
+    howItWorks: {
+      title: "Cómo funciona",
+      subtitle: "Simple, rápido y sin complicaciones. Así puedes disfrutar Dublín en 3 pasos.",
+      step1Title: "1. Compra tu billete",
+      step1Desc: "Elige el tour ideal y reserva online en pocos clics, con confirmación inmediata.",
+      step2Title: "2. Sube en cualquier parada",
+      step2Desc: "Dirígete a cualquiera de las 14 paradas repartidas por el centro de Dublín.",
+      step3Title: "3. Sube y baja tantas veces como quieras",
+      step3Desc: "Explora las atracciones a tu propio ritmo durante 24h o 48h.",
+    },
+    contactBar: {
+      startingPoint: "Punto de partida",
+      startingPointAddress: "Upper O'Connell Street, Dublín 1",
+      support: "Atención al cliente",
+      supportHours: "+353 1 234 5678 · 8h a 19h",
+      email: "Correo electrónico",
+    },
+    faqSection: {
+      title: "Preguntas Frecuentes",
+      subtitle: "Resuelve tus dudas antes de reservar tu tour por Dublín.",
     },
   },
   fr: {
@@ -554,6 +656,8 @@ export const translations = {
       faq: "FAQ",
       contact: "Contact",
       bookNow: "Réserver",
+      openMenu: "Ouvrir le menu",
+      closeMenu: "Fermer le menu",
     },
     hero: {
       ratingSuffix: "· +12 000 avis vérifiés",
@@ -706,12 +810,44 @@ export const translations = {
     chat: {
       title: "Discutez avec nous",
       online: "En ligne maintenant",
+      replyTime: "répond en quelques minutes",
+      greeting: "Bonjour ! 👋 Comment pouvons-nous vous aider pour votre visite de Dublin ?",
+      placeholder: "Écrivez votre message...",
+      openAria: "Ouvrir le chat en direct",
+      closeAria: "Fermer le chat",
+      sendAria: "Envoyer le message",
+      quickReplies: [
+        "Comment fonctionne la visite ?",
+        "Puis-je annuler ma réservation ?",
+        "Quelle est la langue du guide ?",
+      ],
     },
     mobileBookBar: {
       cta: "Réserver maintenant — à partir de",
     },
     currency: {
       label: "Devise",
+    },
+    howItWorks: {
+      title: "Comment ça marche",
+      subtitle: "Simple, rapide et sans tracas. Découvrez comment profiter de Dublin en 3 étapes.",
+      step1Title: "1. Achetez votre billet",
+      step1Desc: "Choisissez la visite idéale et réservez en ligne en quelques clics, avec confirmation immédiate.",
+      step2Title: "2. Montez à n'importe quel arrêt",
+      step2Desc: "Rendez-vous à l'un des 14 arrêts répartis dans le centre de Dublin.",
+      step3Title: "3. Montez et descendez autant de fois que vous voulez",
+      step3Desc: "Explorez les attractions à votre rythme pendant 24h ou 48h.",
+    },
+    contactBar: {
+      startingPoint: "Point de départ",
+      startingPointAddress: "Upper O'Connell Street, Dublin 1",
+      support: "Assistance",
+      supportHours: "+353 1 234 5678 · 8h à 19h",
+      email: "E-mail",
+    },
+    faqSection: {
+      title: "Questions Fréquentes",
+      subtitle: "Trouvez les réponses à vos questions avant de réserver votre visite de Dublin.",
     },
   },
   it: {
@@ -729,6 +865,8 @@ export const translations = {
       faq: "FAQ",
       contact: "Contatti",
       bookNow: "Prenota Ora",
+      openMenu: "Apri il menu",
+      closeMenu: "Chiudi il menu",
     },
     hero: {
       ratingSuffix: "· +12.000 recensioni verificate",
@@ -881,12 +1019,44 @@ export const translations = {
     chat: {
       title: "Chatta con noi",
       online: "Online ora",
+      replyTime: "risponde in pochi minuti",
+      greeting: "Ciao! 👋 Come possiamo aiutarti con la tua visita a Dublino?",
+      placeholder: "Scrivi il tuo messaggio...",
+      openAria: "Apri la chat dal vivo",
+      closeAria: "Chiudi la chat",
+      sendAria: "Invia messaggio",
+      quickReplies: [
+        "Come funziona il tour?",
+        "Posso annullare la prenotazione?",
+        "In che lingua è la guida?",
+      ],
     },
     mobileBookBar: {
       cta: "Prenota ora — da",
     },
     currency: {
       label: "Valuta",
+    },
+    howItWorks: {
+      title: "Come funziona",
+      subtitle: "Semplice, rapido e senza complicazioni. Ecco come goderti Dublino in 3 passaggi.",
+      step1Title: "1. Acquista il biglietto",
+      step1Desc: "Scegli il tour ideale e prenota online in pochi clic, con conferma immediata.",
+      step2Title: "2. Sali a qualsiasi fermata",
+      step2Desc: "Vai a una delle 14 fermate distribuite nel centro di Dublino.",
+      step3Title: "3. Sali e scendi tutte le volte che vuoi",
+      step3Desc: "Esplora le attrazioni al tuo ritmo per 24h o 48h.",
+    },
+    contactBar: {
+      startingPoint: "Punto di partenza",
+      startingPointAddress: "Upper O'Connell Street, Dublino 1",
+      support: "Assistenza",
+      supportHours: "+353 1 234 5678 · 8:00 - 19:00",
+      email: "E-mail",
+    },
+    faqSection: {
+      title: "Domande Frequenti",
+      subtitle: "Rispondi ai tuoi dubbi prima di prenotare il tuo tour a Dublino.",
     },
   },
   de: {
@@ -904,6 +1074,8 @@ export const translations = {
       faq: "FAQ",
       contact: "Kontakt",
       bookNow: "Jetzt Buchen",
+      openMenu: "Menü öffnen",
+      closeMenu: "Menü schließen",
     },
     hero: {
       ratingSuffix: "· +12.000 verifizierte Bewertungen",
@@ -1056,12 +1228,44 @@ export const translations = {
     chat: {
       title: "Chatten Sie mit uns",
       online: "Jetzt online",
+      replyTime: "antwortet in wenigen Minuten",
+      greeting: "Hallo! 👋 Wie können wir Ihnen bei Ihrem Besuch in Dublin helfen?",
+      placeholder: "Schreiben Sie Ihre Nachricht...",
+      openAria: "Live-Chat öffnen",
+      closeAria: "Chat schließen",
+      sendAria: "Nachricht senden",
+      quickReplies: [
+        "Wie funktioniert die Tour?",
+        "Kann ich meine Buchung stornieren?",
+        "In welcher Sprache ist der Guide?",
+      ],
     },
     mobileBookBar: {
       cta: "Jetzt buchen — ab",
     },
     currency: {
       label: "Währung",
+    },
+    howItWorks: {
+      title: "So funktioniert's",
+      subtitle: "Einfach, schnell und unkompliziert. So genießen Sie Dublin in 3 Schritten.",
+      step1Title: "1. Ticket kaufen",
+      step1Desc: "Wählen Sie die ideale Tour und buchen Sie online in wenigen Klicks mit sofortiger Bestätigung.",
+      step2Title: "2. An jeder Haltestelle einsteigen",
+      step2Desc: "Gehen Sie zu einer der 14 Haltestellen im Zentrum von Dublin.",
+      step3Title: "3. So oft ein- und aussteigen, wie Sie möchten",
+      step3Desc: "Erkunden Sie die Attraktionen in Ihrem eigenen Tempo für 24 oder 48 Stunden.",
+    },
+    contactBar: {
+      startingPoint: "Startpunkt",
+      startingPointAddress: "Upper O'Connell Street, Dublin 1",
+      support: "Kundenservice",
+      supportHours: "+353 1 234 5678 · 8 - 19 Uhr",
+      email: "E-Mail",
+    },
+    faqSection: {
+      title: "Häufig gestellte Fragen",
+      subtitle: "Klären Sie Ihre Fragen, bevor Sie Ihre Dublin-Tour buchen.",
     },
   },
 } satisfies Record<Locale, unknown>;
