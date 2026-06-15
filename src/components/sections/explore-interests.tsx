@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useLanguage } from "@/lib/i18n/context";
 
 export function ExploreInterests() {
@@ -9,26 +10,26 @@ export function ExploreInterests() {
     {
       title: t.home.interest.history,
       desc: t.home.interest.historyDesc,
-      emoji: "🏰",
-      gradient: "from-amber-500 to-amber-600",
+      image:
+        "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=1200&auto=format&fit=crop",
     },
     {
       title: t.home.interest.nature,
       desc: t.home.interest.natureDesc,
-      emoji: "🌿",
-      gradient: "from-green-500 to-green-600",
+      image:
+        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1200&auto=format&fit=crop",
     },
     {
       title: t.home.interest.food,
       desc: t.home.interest.foodDesc,
-      emoji: "🍺",
-      gradient: "from-blue-500 to-blue-700",
+      image:
+        "https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?q=80&w=1200&auto=format&fit=crop",
     },
     {
       title: t.home.interest.night,
       desc: t.home.interest.nightDesc,
-      emoji: "🌙",
-      gradient: "from-red-500 to-red-800",
+      image:
+        "https://d2i7eq829tbbje.cloudfront.net/webp/Dublin%20Night%20Tour%20Card_P_4791_972dc684-9687-4e47-b7f8-31f4618bab76",
     },
   ];
 
@@ -46,14 +47,19 @@ export function ExploreInterests() {
           {interests.map((interest) => (
             <div
               key={interest.title}
-              className={`relative rounded-3xl overflow-hidden min-h-[200px] bg-gradient-to-br ${interest.gradient}`}
+              className="group relative overflow-hidden rounded-3xl min-h-[200px]"
             >
-              <div className="p-7 h-full flex flex-col justify-between">
-                <span className="text-4xl">{interest.emoji}</span>
-                <div>
-                  <h3 className="text-lg font-extrabold text-white mb-1">{interest.title}</h3>
-                  <p className="text-sm text-white/85">{interest.desc}</p>
-                </div>
+              <Image
+                src={interest.image}
+                alt={interest.title}
+                fill
+                sizes="(min-width: 1024px) 25vw, 50vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+              <div className="absolute bottom-0 left-0 p-5">
+                <h3 className="text-lg font-extrabold text-white mb-1">{interest.title}</h3>
+                <p className="text-sm text-white/85">{interest.desc}</p>
               </div>
             </div>
           ))}
