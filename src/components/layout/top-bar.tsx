@@ -2,31 +2,24 @@
 
 import { useEffect, useState } from "react";
 import { Award, ShieldCheck, CalendarClock } from "lucide-react";
-
-const seals = [
-  {
-    icon: Award,
-    text: "Líder mundial em tours Hop-On Hop-Off",
-  },
-  {
-    icon: ShieldCheck,
-    text: "Cancelamento gratuito",
-  },
-  {
-    icon: CalendarClock,
-    text: "Vouchers flexíveis: válidos por 12 meses",
-  },
-];
+import { useLanguage } from "@/lib/i18n/context";
 
 export function TopBar() {
   const [index, setIndex] = useState(0);
+  const { t } = useLanguage();
+
+  const seals = [
+    { icon: Award, text: t.topBar.seal1 },
+    { icon: ShieldCheck, text: t.topBar.seal2 },
+    { icon: CalendarClock, text: t.topBar.seal3 },
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((current) => (current + 1) % seals.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [seals.length]);
 
   const Seal = seals[index];
 
@@ -40,8 +33,8 @@ export function TopBar() {
 
       {/* Desktop: três selos lado a lado */}
       <div className="container-page hidden h-10 items-center justify-center gap-8 sm:flex">
-        {seals.map((seal) => (
-          <div key={seal.text} className="flex items-center gap-2">
+        {seals.map((seal, sealIndex) => (
+          <div key={sealIndex} className="flex items-center gap-2">
             <seal.icon className="h-4 w-4 shrink-0 text-secondary" />
             <span className="font-medium">{seal.text}</span>
           </div>

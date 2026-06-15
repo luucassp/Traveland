@@ -1,10 +1,16 @@
+"use client";
+
 import Link from "next/link";
 import { Check, Minus } from "lucide-react";
 import { durationPackages, packageFeatures } from "@/lib/packages";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useCurrency } from "@/lib/currency/context";
+import { CountdownTimer } from "@/components/ui/countdown-timer";
 
 export function PackageComparison() {
+  const { format } = useCurrency();
+
   return (
     <section className="bg-[#fafafa] py-16">
       <div className="container-page">
@@ -16,6 +22,9 @@ export function PackageComparison() {
             Compare o que está incluído em cada pacote e aproveite mais quanto mais
             tempo você fica.
           </p>
+          <div className="mt-4 flex justify-center">
+            <CountdownTimer />
+          </div>
         </div>
 
         <div className="mx-auto mt-10 max-w-4xl overflow-hidden rounded-2xl border border-black/5 bg-white shadow-sm">
@@ -39,7 +48,7 @@ export function PackageComparison() {
                   {pkg.duration}
                 </p>
                 <p className="text-xs text-text-secondary">{pkg.label}</p>
-                <p className="mt-2 text-lg font-bold text-primary">€{pkg.price}</p>
+                <p className="mt-2 text-lg font-bold text-primary">{format(pkg.price)}</p>
               </div>
             ))}
           </div>

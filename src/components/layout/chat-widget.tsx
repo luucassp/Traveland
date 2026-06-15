@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { MessageCircle, X, Send } from "lucide-react";
+import { useLanguage } from "@/lib/i18n/context";
 
 const quickReplies = [
   "Como funciona o tour?",
@@ -11,6 +12,7 @@ const quickReplies = [
 
 export function ChatWidget() {
   const [open, setOpen] = useState(false);
+  const { t } = useLanguage();
 
   return (
     <>
@@ -37,8 +39,8 @@ export function ChatWidget() {
               <span className="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full border-2 border-primary bg-success" />
             </div>
             <div>
-              <p className="text-sm font-semibold">Atendimento City Sightseeing</p>
-              <p className="text-xs text-white/80">Online · responde em minutos</p>
+              <p className="text-sm font-semibold">{t.chat.title}</p>
+              <p className="text-xs text-white/80">{t.chat.online} · responde em minutos</p>
             </div>
           </div>
 

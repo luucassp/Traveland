@@ -1,19 +1,30 @@
-import Image from "next/image";
+"use client";
+
 import Link from "next/link";
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/lib/i18n/context";
+import { useCurrency } from "@/lib/currency/context";
 
 export function HeroBanner() {
+  const { t } = useLanguage();
+  const { format } = useCurrency();
+
   return (
     <section className="relative isolate flex min-h-[640px] items-center overflow-hidden">
-      <Image
-        src="https://d3hrj27b4bz3ky.cloudfront.net/webp/large/0cd433228-fe73-4496-a024-ec509ff7f483"
-        alt="Vista aérea de Dublin"
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover"
-      />
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        aria-label="Ônibus turístico vermelho Hop-On Hop-Off com turistas em Dublin"
+        className="absolute inset-0 h-full w-full object-cover"
+      >
+        <source
+          src="https://videos.pexels.com/video-files/4003023/4003023-hd_1920_1080_30fps.mp4"
+          type="video/mp4"
+        />
+      </video>
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/20" />
 
       <div className="container-page relative z-10 py-24 text-white">
@@ -22,29 +33,26 @@ export function HeroBanner() {
             <Star className="h-4 w-4 fill-secondary" />
             4.4/5
           </span>
-          <span className="text-white/80">· +12.000 avaliações verificadas</span>
+          <span className="text-white/80">{t.hero.ratingSuffix}</span>
         </div>
 
         <h1 className="max-w-2xl text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
-          Explore Dublin no seu próprio ritmo
+          {t.hero.title}
         </h1>
-        <p className="mt-4 max-w-xl text-lg text-white/85">
-          Tours hop-on hop-off, passeios de bike, caminhadas históricas e muito mais.
-          Suba e desça quantas vezes quiser nas principais atrações da cidade.
-        </p>
+        <p className="mt-4 max-w-xl text-lg text-white/85">{t.hero.subtitle}</p>
 
         <div className="mt-6 flex items-baseline gap-2">
-          <span className="text-sm text-white/70">A partir de</span>
-          <span className="text-3xl font-extrabold text-secondary">€18</span>
-          <span className="text-sm text-white/70">por pessoa</span>
+          <span className="text-sm text-white/70">{t.hero.from}</span>
+          <span className="text-3xl font-extrabold text-secondary">{format(18)}</span>
+          <span className="text-sm text-white/70">{t.hero.perPerson}</span>
         </div>
 
         <div className="mt-8 flex flex-wrap gap-4">
           <Button asChild size="lg">
-            <Link href="/booking">Reservar Agora</Link>
+            <Link href="/booking">{t.hero.bookNow}</Link>
           </Button>
           <Button asChild variant="outline" size="lg">
-            <Link href="/tours">Ver Tours</Link>
+            <Link href="/tours">{t.hero.seeTours}</Link>
           </Button>
         </div>
       </div>

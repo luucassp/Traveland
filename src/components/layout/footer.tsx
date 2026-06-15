@@ -1,32 +1,37 @@
+"use client";
+
 import Link from "next/link";
 import { Bus, Share2, Camera, AtSign, MapPin, Phone, Mail, Mailbox } from "lucide-react";
 import { NewsletterForm } from "@/components/forms/newsletter-form";
-
-const columns = [
-  {
-    title: "Tours",
-    links: [
-      { href: "/tours/bus-tour", label: "Hop-On Hop-Off" },
-      { href: "/tours/river-cruise", label: "Liffey River Cruise" },
-      { href: "/tours/bike-tour", label: "Bike Tour" },
-      { href: "/tours/howth-tour", label: "Howth Coastal Tour" },
-      { href: "/tours/evening-tour", label: "Dublin by Night" },
-      { href: "/tours/walking-tour", label: "Walking Tour" },
-    ],
-  },
-  {
-    title: "Informações",
-    links: [
-      { href: "/bus-stops", label: "Paradas do Bus" },
-      { href: "/tickets", label: "Bilhetes & Preços" },
-      { href: "/faq", label: "Perguntas Frequentes" },
-      { href: "/about", label: "Sobre Nós" },
-      { href: "/blog", label: "Blog" },
-    ],
-  },
-];
+import { useLanguage } from "@/lib/i18n/context";
 
 export function Footer() {
+  const { t } = useLanguage();
+
+  const columns = [
+    {
+      title: t.footer.toursTitle,
+      links: [
+        { href: "/tours/bus-tour", label: "Hop-On Hop-Off" },
+        { href: "/tours/river-cruise", label: "Liffey River Cruise" },
+        { href: "/tours/bike-tour", label: "Bike Tour" },
+        { href: "/tours/howth-tour", label: "Howth Coastal Tour" },
+        { href: "/tours/evening-tour", label: "Dublin by Night" },
+        { href: "/tours/walking-tour", label: "Walking Tour" },
+      ],
+    },
+    {
+      title: t.footer.infoTitle,
+      links: [
+        { href: "/bus-stops", label: t.nav.busStops },
+        { href: "/tickets", label: t.nav.tickets },
+        { href: "/faq", label: t.nav.faq },
+        { href: "/about", label: t.nav.about },
+        { href: "/blog", label: t.nav.blog },
+      ],
+    },
+  ];
+
   return (
     <footer className="bg-[#1a1a1a] text-white">
       {/* Newsletter */}
@@ -37,10 +42,8 @@ export function Footer() {
               <Mailbox className="h-5 w-5" />
             </span>
             <div>
-              <h3 className="text-lg font-bold">Receba ofertas exclusivas</h3>
-              <p className="text-sm text-white/60">
-                Dicas de Dublin e promoções dos nossos tours direto no seu e-mail.
-              </p>
+              <h3 className="text-lg font-bold">{t.footer.newsletterTitle}</h3>
+              <p className="text-sm text-white/60">{t.footer.newsletterText}</p>
             </div>
           </div>
           <div className="w-full md:max-w-sm">
@@ -59,10 +62,7 @@ export function Footer() {
               City <span className="text-secondary">Sightseeing</span> Dublin
             </span>
           </Link>
-          <p className="mt-4 text-sm text-white/60 leading-relaxed">
-            Explore Dublin no seu próprio ritmo com nossos tours hop-on hop-off,
-            passeios de bike, caminhadas históricas e muito mais.
-          </p>
+          <p className="mt-4 text-sm text-white/60 leading-relaxed">{t.footer.about}</p>
           <div className="mt-4 flex gap-3">
             <a
               href="#"
@@ -104,7 +104,7 @@ export function Footer() {
         ))}
 
         <div>
-          <h3 className="font-semibold text-white">Contato</h3>
+          <h3 className="font-semibold text-white">{t.footer.contactTitle}</h3>
           <ul className="mt-4 space-y-3 text-sm text-white/60">
             <li className="flex items-start gap-2">
               <MapPin className="h-4 w-4 mt-0.5 shrink-0 text-secondary" />
@@ -124,8 +124,8 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="container-page flex flex-col sm:flex-row items-center justify-between gap-2 py-4 text-xs text-white/50">
-          <p>&copy; {new Date().getFullYear()} City Sightseeing Dublin. Todos os direitos reservados.</p>
-          <p>Demo site — Redesign &amp; Modernização</p>
+          <p>&copy; {new Date().getFullYear()} City Sightseeing Dublin. {t.footer.rights}</p>
+          <p>{t.footer.demo}</p>
         </div>
       </div>
     </footer>

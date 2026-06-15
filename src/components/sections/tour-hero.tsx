@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { Star, Clock, Languages } from "lucide-react";
 import type { Tour } from "@/lib/tours";
+import { PhotoGallery } from "@/components/sections/photo-gallery";
 
 export function TourHero({ tour }: { tour: Tour }) {
   return (
@@ -29,28 +29,8 @@ export function TourHero({ tour }: { tour: Tour }) {
         </span>
       </div>
 
-      <div className="mt-6 grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3">
-        <div className="relative col-span-2 row-span-2 h-56 overflow-hidden rounded-2xl sm:h-80">
-          <Image
-            src={tour.gallery[0]}
-            alt={tour.name}
-            fill
-            priority
-            sizes="(min-width: 640px) 50vw, 100vw"
-            className="object-cover"
-          />
-        </div>
-        {tour.gallery.slice(1).map((image, index) => (
-          <div key={image} className="relative h-28 overflow-hidden rounded-2xl sm:h-[9.5rem]">
-            <Image
-              src={image}
-              alt={`${tour.name} ${index + 2}`}
-              fill
-              sizes="25vw"
-              className="object-cover"
-            />
-          </div>
-        ))}
+      <div className="mt-6">
+        <PhotoGallery images={tour.gallery} alt={tour.name} />
       </div>
     </section>
   );
