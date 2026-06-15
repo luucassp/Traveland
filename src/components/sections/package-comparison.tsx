@@ -27,10 +27,11 @@ export function PackageComparison() {
           </div>
         </div>
 
-        <div className="mx-auto mt-10 max-w-4xl overflow-hidden rounded-2xl border border-black/5 bg-white shadow-sm">
+        <div className="mt-10 -mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
+        <div className="mx-auto min-w-[560px] max-w-4xl overflow-hidden rounded-2xl border border-black/5 bg-white shadow-sm">
           {/* Cabeçalho dos pacotes */}
           <div className="grid grid-cols-[1.6fr_repeat(3,1fr)] border-b border-black/10">
-            <div className="hidden p-4 sm:block" />
+            <div className="p-4" />
             {durationPackages.map((pkg) => (
               <div
                 key={pkg.duration}
@@ -83,7 +84,7 @@ export function PackageComparison() {
 
           {/* CTAs */}
           <div className="grid grid-cols-[1.6fr_repeat(3,1fr)] border-t border-black/10 bg-white">
-            <div className="hidden p-4 sm:block" />
+            <div className="p-4" />
             {durationPackages.map((pkg) => (
               <div
                 key={pkg.duration}
@@ -100,6 +101,7 @@ export function PackageComparison() {
               </div>
             ))}
           </div>
+        </div>
         </div>
       </div>
     </section>
