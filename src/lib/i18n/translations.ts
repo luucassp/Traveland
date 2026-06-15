@@ -1,9 +1,10 @@
-export type Locale = "pt" | "es" | "fr" | "it" | "de";
+export type Locale = "pt" | "en" | "es" | "fr" | "it" | "de";
 
-export const locales: Locale[] = ["pt", "es", "fr", "it", "de"];
+export const locales: Locale[] = ["pt", "en", "es", "fr", "it", "de"];
 
 export const localeNames: Record<Locale, string> = {
   pt: "Português",
+  en: "English",
   es: "Español",
   fr: "Français",
   it: "Italiano",
@@ -109,6 +110,104 @@ export const translations = {
     },
     currency: {
       label: "Moeda",
+    },
+  },
+  en: {
+    topBar: {
+      seal1: "World leader in Hop-On Hop-Off tours",
+      seal2: "Free cancellation",
+      seal3: "Flexible vouchers: valid for 12 months",
+    },
+    nav: {
+      tours: "Tours",
+      busStops: "Bus Stops",
+      tickets: "Tickets",
+      about: "About",
+      blog: "Blog",
+      faq: "FAQ",
+      contact: "Contact",
+      bookNow: "Book Now",
+    },
+    hero: {
+      ratingSuffix: "· +12,000 verified reviews",
+      title: "Explore Dublin at your own pace",
+      subtitle:
+        "Hop-on hop-off tours, bike rides, historic walking tours and much more. Hop on and off as many times as you like at the city's main attractions.",
+      from: "From",
+      perPerson: "per person",
+      bookNow: "Book Now",
+      seeTours: "See Tours",
+    },
+    home: {
+      explore: {
+        eyebrow: "Dublin your way",
+        title: "How do you want to explore the city?",
+        busTitle: "Bus Tour",
+        busDesc: "Hop on and off whenever you like at 14 stops",
+        bikeTitle: "Bike Tour",
+        bikeDesc: "Discover hidden corners by bike",
+        boatTitle: "River Cruise",
+        boatDesc: "See Dublin from a unique angle along the Liffey",
+        from: "From",
+      },
+      interest: {
+        eyebrow: "Find your experience",
+        title: "Explore Dublin by interest",
+        history: "History & Culture",
+        historyDesc: "Castles, museums and Irish legends",
+        nature: "Nature & Outdoors",
+        natureDesc: "Cliffs, parks and the wild coast",
+        food: "Food & Pubs",
+        foodDesc: "Pubs, whiskey and local cuisine",
+        night: "Dublin by Night",
+        nightDesc: "The city lit up by historic lanterns",
+      },
+      stats: {
+        eyebrow: "Numbers that speak for themselves",
+        title: "Creating unforgettable experiences in Dublin",
+        satisfied: "Satisfied customers",
+        recommend: "Recommend the tour",
+        days: "Days of operation per year",
+        stops: "Stops across Dublin city centre",
+      },
+      newsletter: {
+        badge: "Exclusive offers for subscribers",
+        title: "Get Dublin deals straight to your inbox",
+        subtitle:
+          "Exclusive discounts, new tours and travel tips to make the most of Dublin.",
+        placeholder: "Your best email",
+        button: "Sign me up",
+        disclaimer: "No spam. Unsubscribe anytime. 🔒",
+      },
+    },
+    promo: {
+      title: "Limited-time offer! Ends in:",
+      days: "days",
+      hours: "hours",
+      minutes: "min",
+      seconds: "sec",
+    },
+    footer: {
+      newsletterTitle: "Get exclusive offers",
+      newsletterText: "Dublin tips and tour promotions straight to your inbox.",
+      newsletterSuccess: "Subscription confirmed! You'll receive our news soon.",
+      about:
+        "Explore Dublin at your own pace with our hop-on hop-off tours, bike rides, historic walking tours and much more.",
+      toursTitle: "Tours",
+      infoTitle: "Information",
+      contactTitle: "Contact",
+      rights: "All rights reserved.",
+      demo: "Demo site — Redesign & Modernization",
+    },
+    chat: {
+      title: "Chat with us",
+      online: "Online now",
+    },
+    mobileBookBar: {
+      cta: "Book now — from",
+    },
+    currency: {
+      label: "Currency",
     },
   },
   es: {

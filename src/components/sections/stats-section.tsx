@@ -2,15 +2,16 @@
 
 import { Users, ThumbsUp, CalendarCheck, Bus } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/context";
+import { CountUp } from "@/components/ui/count-up";
 
 export function StatsSection() {
   const { t } = useLanguage();
 
   const stats = [
-    { icon: Users, value: "200k+", label: t.home.stats.satisfied },
-    { icon: ThumbsUp, value: "94%", label: t.home.stats.recommend },
-    { icon: CalendarCheck, value: "365", label: t.home.stats.days },
-    { icon: Bus, value: "14", label: t.home.stats.stops },
+    { icon: Users, end: 200, suffix: "k+", label: t.home.stats.satisfied },
+    { icon: ThumbsUp, end: 94, suffix: "%", label: t.home.stats.recommend },
+    { icon: CalendarCheck, end: 365, suffix: "", label: t.home.stats.days },
+    { icon: Bus, end: 14, suffix: "", label: t.home.stats.stops },
   ];
 
   return (
@@ -32,7 +33,9 @@ export function StatsSection() {
               <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <stat.icon className="h-6 w-6 text-amber-400" />
               </div>
-              <div className="text-5xl font-black text-amber-400 leading-none">{stat.value}</div>
+              <div className="text-5xl font-black text-amber-400 leading-none">
+                <CountUp end={stat.end} suffix={stat.suffix} />
+              </div>
               <div className="text-sm text-white/75 mt-2 font-medium">{stat.label}</div>
             </div>
           ))}
