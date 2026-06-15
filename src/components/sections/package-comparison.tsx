@@ -7,30 +7,31 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useCurrency } from "@/lib/currency/context";
 import { CountdownTimer } from "@/components/ui/countdown-timer";
+import { useLanguage } from "@/lib/i18n/context";
+import { localize } from "@/lib/i18n/translations";
 
 export function PackageComparison() {
   const { format } = useCurrency();
+  const { locale, t } = useLanguage();
 
   return (
     <section className="bg-[#fafafa] py-16">
       <div className="container-page">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-extrabold sm:text-4xl">
-            Escolha a duração ideal
+            {t.packagesSection.title}
           </h2>
-          <p className="mt-3 text-text-secondary">
-            Compare o que está incluído em cada pacote e aproveite mais quanto mais
-            tempo você fica.
-          </p>
+          <p className="mt-3 text-text-secondary">{t.packagesSection.subtitle}</p>
           <div className="mt-4 flex justify-center">
             <CountdownTimer />
           </div>
         </div>
 
-        <div className="mx-auto mt-10 max-w-4xl overflow-hidden rounded-2xl border border-black/5 bg-white shadow-sm">
+        <div className="mt-10 -mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
+        <div className="mx-auto min-w-[560px] max-w-4xl overflow-hidden rounded-2xl border border-black/5 bg-white shadow-sm">
           {/* Cabeçalho dos pacotes */}
           <div className="grid grid-cols-[1.6fr_repeat(3,1fr)] border-b border-black/10">
-            <div className="hidden p-4 sm:block" />
+            <div className="p-4" />
             {durationPackages.map((pkg) => (
               <div
                 key={pkg.duration}
@@ -41,13 +42,13 @@ export function PackageComparison() {
               >
                 {pkg.highlight && (
                   <span className="absolute inset-x-0 top-0 bg-primary py-0.5 text-[10px] font-semibold uppercase tracking-wide text-white">
-                    {pkg.highlight}
+                    {localize(pkg.highlight, locale)}
                   </span>
                 )}
                 <p className={cn("text-2xl font-extrabold", pkg.highlight && "mt-4")}>
                   {pkg.duration}
                 </p>
-                <p className="text-xs text-text-secondary">{pkg.label}</p>
+                <p className="text-xs text-text-secondary">{localize(pkg.label, locale)}</p>
                 <p className="mt-2 text-lg font-bold text-primary">{format(pkg.price)}</p>
               </div>
             ))}
@@ -56,13 +57,13 @@ export function PackageComparison() {
           {/* Linhas de features */}
           {packageFeatures.map((feature, rowIndex) => (
             <div
-              key={feature.label}
+              key={feature.label.en}
               className={cn(
                 "grid grid-cols-[1.6fr_repeat(3,1fr)] items-center border-b border-black/5 last:border-0",
                 rowIndex % 2 === 1 && "bg-black/[0.015]"
               )}
             >
-              <div className="p-4 text-sm font-medium">{feature.label}</div>
+              <div className="p-4 text-sm font-medium">{localize(feature.label, locale)}</div>
               {feature.included.map((included, colIndex) => (
                 <div
                   key={colIndex}
@@ -83,7 +84,7 @@ export function PackageComparison() {
 
           {/* CTAs */}
           <div className="grid grid-cols-[1.6fr_repeat(3,1fr)] border-t border-black/10 bg-white">
-            <div className="hidden p-4 sm:block" />
+            <div className="p-4" />
             {durationPackages.map((pkg) => (
               <div
                 key={pkg.duration}
@@ -95,11 +96,12 @@ export function PackageComparison() {
                   variant={pkg.popular ? "primary" : "outline-dark"}
                   className="w-full"
                 >
-                  <Link href="/booking">Reservar</Link>
+                  <Link href="/booking">{t.packagesSection.reserve}</Link>
                 </Button>
               </div>
             ))}
           </div>
+        </div>
         </div>
       </div>
     </section>
