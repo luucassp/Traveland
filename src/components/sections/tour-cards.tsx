@@ -96,7 +96,7 @@ export function TourCards() {
 
               <Link
                 href={`/tours/${tour.slug}`}
-                className="mt-4 inline-flex h-11 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-white transition-colors hover:bg-primary-dark"
+                className="mt-auto inline-flex h-11 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-white transition-colors hover:bg-primary-dark"
               >
                 Ver detalhes e reservar
               </Link>

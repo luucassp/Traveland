@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -13,14 +12,19 @@ export function HeroBanner() {
 
   return (
     <section className="relative isolate flex min-h-[640px] items-center overflow-hidden">
-      <Image
-        src="https://d2i7eq829tbbje.cloudfront.net/webp/Dublin-HOHO-main-pic1_P_60_70975efe-3076-4f53-a4de-8dd57650bcdc"
-        alt="Ônibus turístico vermelho Hop-On Hop-Off com turistas em Dublin"
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover"
-      />
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        aria-label="Ônibus turístico vermelho Hop-On Hop-Off com turistas em Dublin"
+        className="absolute inset-0 h-full w-full object-cover"
+      >
+        <source
+          src="https://videos.pexels.com/video-files/4003023/4003023-hd_1920_1080_30fps.mp4"
+          type="video/mp4"
+        />
+      </video>
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/20" />
 
       <div className="container-page relative z-10 py-24 text-white">

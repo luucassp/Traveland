@@ -108,9 +108,9 @@ export const tours: Tour[] = [
     description:
       "Um tour guiado de bicicleta pelos principais bairros e parques de Dublin, com paradas para fotos e histórias sobre a cidade contadas por guias locais apaixonados.",
     image:
-      "https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1518391846015-55a9cc003b25?q=80&w=1600&auto=format&fit=crop",
     gallery: [
-      "https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1518391846015-55a9cc003b25?q=80&w=1600&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1485965120184-e220f721d03e?q=80&w=1600&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1471506480208-91b3a4cc78be?q=80&w=1600&auto=format&fit=crop",
     ],

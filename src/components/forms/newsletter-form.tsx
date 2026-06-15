@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import { Send, Check } from "lucide-react";
+import { useLanguage } from "@/lib/i18n/context";
 
 export function NewsletterForm() {
+  const { t } = useLanguage();
   const [submitted, setSubmitted] = useState(false);
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -15,7 +17,7 @@ export function NewsletterForm() {
     return (
       <p className="mt-4 flex items-center gap-2 text-sm text-success">
         <Check className="h-4 w-4" />
-        Inscrição confirmada! Em breve você receberá nossas novidades.
+        {t.footer.newsletterSuccess}
       </p>
     );
   }
@@ -26,7 +28,7 @@ export function NewsletterForm() {
         required
         type="email"
         name="email"
-        placeholder="Seu melhor e-mail"
+        placeholder={t.home.newsletter.placeholder}
         className="min-w-0 flex-1 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm text-white placeholder:text-white/40 focus:border-secondary focus:outline-none"
       />
       <button
