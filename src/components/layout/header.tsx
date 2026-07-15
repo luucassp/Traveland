@@ -42,7 +42,7 @@ export function Header() {
       <div className="container-page flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="https://bucket-static-files.city-sightseeing.com/static-images/webp/logo-city-sightseeing.png"
+            src="/logo.svg"
             alt="City Sightseeing Dublin"
             width={180}
             height={44}
