@@ -13,6 +13,8 @@ in **6 languages** and **3 currencies**.
 
 🔗 **Live:** [traveland-kappa.vercel.app](https://traveland-kappa.vercel.app)
 
+[![Traveland](docs/screenshot.png)](https://traveland-kappa.vercel.app)
+
 ---
 
 ## What it does
