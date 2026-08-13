@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "City Sightseeing Dublin | Tours Hop-On Hop-Off",
+  title: "Traveland | Dublin Hop-On Hop-Off Tours",
   description:
     "Explore Dublin with hop-on hop-off bus tours, bike tours, night tours and historical walking tours. Book online at the best prices.",
 };

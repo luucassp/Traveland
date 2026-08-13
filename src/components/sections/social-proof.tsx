@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Star, ExternalLink } from "lucide-react";
+import { Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { tours } from "@/lib/tours";
 import { useLanguage } from "@/lib/i18n/context";
@@ -19,26 +19,14 @@ export function SocialProof() {
           <h2 className="text-3xl font-extrabold sm:text-4xl">{t.social.title}</h2>
           <p className="mt-3 text-text-secondary">{t.social.subtitle}</p>
           <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
-            <a
-              href="https://www.tripadvisor.com/Attraction_Review-g186605-City_Sightseeing_Dublin.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 rounded-full bg-white px-4 py-2 text-sm font-semibold shadow-sm transition-shadow hover:shadow-md"
-            >
+            <span className="inline-flex items-center gap-1 rounded-full bg-white px-4 py-2 text-sm font-semibold shadow-sm">
               <Star className="h-4 w-4 fill-secondary text-secondary" />
               {t.social.tripadvisor}
-              <ExternalLink className="h-3.5 w-3.5 text-text-secondary" />
-            </a>
-            <a
-              href="https://www.google.com/maps/search/City+Sightseeing+Dublin"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 rounded-full bg-white px-4 py-2 text-sm font-semibold shadow-sm transition-shadow hover:shadow-md"
-            >
+            </span>
+            <span className="inline-flex items-center gap-1 rounded-full bg-white px-4 py-2 text-sm font-semibold shadow-sm">
               <Star className="h-4 w-4 fill-secondary text-secondary" />
               {t.social.google}
-              <ExternalLink className="h-3.5 w-3.5 text-text-secondary" />
-            </a>
+            </span>
           </div>
         </div>
 

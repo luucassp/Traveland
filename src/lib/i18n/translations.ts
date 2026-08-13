@@ -15,6 +15,19 @@ export const defaultLocale: Locale = "en";
 
 export const translations = {
   pt: {
+    about: {
+      title: "Sobre Nós",
+      intro1: "Há mais de 20 anos, a Traveland leva visitantes do mundo todo para conhecer os pontos mais icônicos da capital irlandesa. Nossa frota de ônibus open-top percorre diariamente o centro histórico, conectando atrações culturais, gastronômicas e paisagens únicas.",
+      intro2: "Combinamos tradição com inovação: motoristas e guias locais experientes, áudio guias em 10 idiomas e uma experiência pensada para todos os perfis de viajante, sozinhos, em família ou em grupo.",
+      imageAlt1: "Ônibus turístico em Dublin",
+      imageAlt2: "Pontos turísticos de Dublin",
+      imageAlt3: "Vista panorâmica de Dublin",
+      teamTitle: "Nossa Equipe",
+      teamSubtitle: "Pessoas apaixonadas por Dublin, dedicadas a fazer da sua visita uma experiência inesquecível.",
+      role1: "Diretora de Operações",
+      role2: "Gerente de Frota",
+      role3: "Coordenadora de Guias",
+    },
     topBar: {
       seal1: "Líder mundial em tours Hop-On Hop-Off",
       seal2: "Cancelamento gratuito",
@@ -224,6 +237,19 @@ export const translations = {
     },
   },
   en: {
+    about: {
+      title: "About Us",
+      intro1: "For over 20 years, Traveland has been showing visitors from around the world the most iconic corners of the Irish capital. Our fleet of open-top buses runs through the historic centre every day, connecting cultural attractions, food and unique views.",
+      intro2: "We combine tradition with innovation: experienced local drivers and guides, audio guides in 10 languages, and an experience designed for every kind of traveller, whether solo, with family or in a group.",
+      imageAlt1: "Sightseeing bus in Dublin",
+      imageAlt2: "Dublin landmarks",
+      imageAlt3: "Panoramic view of Dublin",
+      teamTitle: "Our Team",
+      teamSubtitle: "People passionate about Dublin, dedicated to making your visit unforgettable.",
+      role1: "Operations Director",
+      role2: "Fleet Manager",
+      role3: "Guide Coordinator",
+    },
     topBar: {
       seal1: "World leader in Hop-On Hop-Off tours",
       seal2: "Free cancellation",
@@ -433,6 +459,19 @@ export const translations = {
     },
   },
   es: {
+    about: {
+      title: "Sobre Nosotros",
+      intro1: "Desde hace más de 20 años, Traveland lleva a visitantes de todo el mundo a conocer los puntos más icónicos de la capital irlandesa. Nuestra flota de autobuses descapotables recorre a diario el centro histórico, conectando atracciones culturales, gastronómicas y paisajes únicos.",
+      intro2: "Combinamos tradición e innovación: conductores y guías locales con experiencia, audioguías en 10 idiomas y una experiencia pensada para todos los perfiles de viajero, en solitario, en familia o en grupo.",
+      imageAlt1: "Autobús turístico en Dublín",
+      imageAlt2: "Lugares emblemáticos de Dublín",
+      imageAlt3: "Vista panorámica de Dublín",
+      teamTitle: "Nuestro Equipo",
+      teamSubtitle: "Personas apasionadas por Dublín, dedicadas a hacer de tu visita una experiencia inolvidable.",
+      role1: "Directora de Operaciones",
+      role2: "Gerente de Flota",
+      role3: "Coordinadora de Guías",
+    },
     topBar: {
       seal1: "Líder mundial en tours Hop-On Hop-Off",
       seal2: "Cancelación gratuita",
@@ -642,6 +681,19 @@ export const translations = {
     },
   },
   fr: {
+    about: {
+      title: "À Propos",
+      intro1: "Depuis plus de 20 ans, Traveland fait découvrir aux visiteurs du monde entier les lieux les plus emblématiques de la capitale irlandaise. Notre flotte de bus à toit ouvert parcourt chaque jour le centre historique, reliant attractions culturelles, adresses gourmandes et panoramas uniques.",
+      intro2: "Nous allions tradition et innovation : des chauffeurs et guides locaux expérimentés, des audioguides en 10 langues et une expérience pensée pour tous les voyageurs, seuls, en famille ou en groupe.",
+      imageAlt1: "Bus touristique à Dublin",
+      imageAlt2: "Sites emblématiques de Dublin",
+      imageAlt3: "Vue panoramique de Dublin",
+      teamTitle: "Notre Équipe",
+      teamSubtitle: "Des passionnés de Dublin, dévoués à rendre votre visite inoubliable.",
+      role1: "Directrice des Opérations",
+      role2: "Responsable de Flotte",
+      role3: "Coordinatrice des Guides",
+    },
     topBar: {
       seal1: "Leader mondial des tours Hop-On Hop-Off",
       seal2: "Annulation gratuite",
@@ -851,6 +903,19 @@ export const translations = {
     },
   },
   it: {
+    about: {
+      title: "Chi Siamo",
+      intro1: "Da oltre 20 anni Traveland accompagna visitatori da tutto il mondo alla scoperta dei luoghi più iconici della capitale irlandese. La nostra flotta di bus scoperti percorre ogni giorno il centro storico, collegando attrazioni culturali, gastronomiche e panorami unici.",
+      intro2: "Uniamo tradizione e innovazione: autisti e guide locali esperti, audioguide in 10 lingue e un'esperienza pensata per ogni tipo di viaggiatore, da solo, in famiglia o in gruppo.",
+      imageAlt1: "Bus turistico a Dublino",
+      imageAlt2: "Luoghi simbolo di Dublino",
+      imageAlt3: "Vista panoramica di Dublino",
+      teamTitle: "Il Nostro Team",
+      teamSubtitle: "Persone appassionate di Dublino, dedite a rendere la tua visita indimenticabile.",
+      role1: "Direttrice Operativa",
+      role2: "Responsabile della Flotta",
+      role3: "Coordinatrice delle Guide",
+    },
     topBar: {
       seal1: "Leader mondiale nei tour Hop-On Hop-Off",
       seal2: "Cancellazione gratuita",
@@ -1060,6 +1125,19 @@ export const translations = {
     },
   },
   de: {
+    about: {
+      title: "Über Uns",
+      intro1: "Seit über 20 Jahren zeigt Traveland Besuchern aus aller Welt die bekanntesten Orte der irischen Hauptstadt. Unsere Flotte offener Doppeldecker fährt täglich durch das historische Zentrum und verbindet Kultur, Kulinarik und einzigartige Ausblicke.",
+      intro2: "Wir verbinden Tradition mit Innovation: erfahrene einheimische Fahrer und Guides, Audioguides in 10 Sprachen und ein Erlebnis für jeden Reisetyp, allein, mit der Familie oder in der Gruppe.",
+      imageAlt1: "Sightseeing-Bus in Dublin",
+      imageAlt2: "Sehenswürdigkeiten in Dublin",
+      imageAlt3: "Panoramablick auf Dublin",
+      teamTitle: "Unser Team",
+      teamSubtitle: "Menschen, die Dublin lieben und Ihren Besuch unvergesslich machen.",
+      role1: "Betriebsleiterin",
+      role2: "Flottenmanager",
+      role3: "Guide-Koordinatorin",
+    },
     topBar: {
       seal1: "Weltweiter Marktführer für Hop-On-Hop-Off-Touren",
       seal2: "Kostenlose Stornierung",

@@ -15,10 +15,6 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "d3hrj27b4bz3ky.cloudfront.net",
       },
-      {
-        protocol: "https",
-        hostname: "bucket-static-files.city-sightseeing.com",
-      },
     ],
   },
 };

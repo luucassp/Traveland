@@ -27,7 +27,7 @@ export function ContactBar() {
           <Mail className="h-6 w-6 shrink-0 text-secondary" />
           <div>
             <p className="font-semibold">{t.contactBar.email}</p>
-            <p className="text-sm text-white/70">info@citysightseeingdublin.ie</p>
+            <p className="text-sm text-white/70">hello@traveland.ie</p>
           </div>
         </div>
       </div>

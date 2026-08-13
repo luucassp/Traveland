@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { Menu, X, Globe, Check, Coins } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/i18n/context";
@@ -40,15 +39,13 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-black/5">
       <div className="container-page flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <Image
-            src="https://bucket-static-files.city-sightseeing.com/static-images/webp/logo-city-sightseeing.png"
-            alt="City Sightseeing Dublin"
-            width={180}
-            height={44}
-            priority
-            className="h-10 w-auto"
-          />
+        <Link href="/" className="flex items-center gap-2" aria-label="Traveland - home">
+          <span className="text-xl font-extrabold tracking-tight text-primary">
+            Traveland
+          </span>
+          <span className="hidden text-xs font-medium uppercase tracking-widest text-foreground/50 sm:inline">
+            Dublin
+          </span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-6 text-sm font-medium">

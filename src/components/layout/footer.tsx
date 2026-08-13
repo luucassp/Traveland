@@ -59,7 +59,7 @@ export function Footer() {
               <Bus className="h-5 w-5" />
             </span>
             <span>
-              City <span className="text-secondary">Sightseeing</span> Dublin
+              Trave<span className="text-secondary">land</span> Dublin
             </span>
           </Link>
           <p className="mt-4 text-sm text-white/60 leading-relaxed">{t.footer.about}</p>
@@ -108,7 +108,7 @@ export function Footer() {
           <ul className="mt-4 space-y-3 text-sm text-white/60">
             <li className="flex items-start gap-2">
               <MapPin className="h-4 w-4 mt-0.5 shrink-0 text-secondary" />
-              <span>Upper O&apos;Connell Street, Dublin 1, Irlanda</span>
+              <span>Upper O&apos;Connell Street, Dublin 1, Ireland</span>
             </li>
             <li className="flex items-center gap-2">
               <Phone className="h-4 w-4 shrink-0 text-secondary" />
@@ -116,7 +116,7 @@ export function Footer() {
             </li>
             <li className="flex items-center gap-2">
               <Mail className="h-4 w-4 shrink-0 text-secondary" />
-              <span>info@citysightseeingdublin.ie</span>
+              <span>hello@traveland.ie</span>
             </li>
           </ul>
         </div>
@@ -124,7 +124,7 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="container-page flex flex-col sm:flex-row items-center justify-between gap-2 py-4 text-xs text-white/50">
-          <p>&copy; {new Date().getFullYear()} City Sightseeing Dublin. {t.footer.rights}</p>
+          <p>&copy; {new Date().getFullYear()} Traveland. {t.footer.rights}</p>
           <p>{t.footer.demo}</p>
         </div>
       </div>

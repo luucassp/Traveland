@@ -39,7 +39,7 @@ export default function ContactPage() {
             <Mail className="h-5 w-5 shrink-0 text-primary" />
             <div>
               <p className="font-semibold">E-mail</p>
-              <p className="text-sm text-text-secondary">info@citysightseeingdublin.ie</p>
+              <p className="text-sm text-text-secondary">hello@traveland.ie</p>
             </div>
           </div>
           <div className="flex items-start gap-3">
