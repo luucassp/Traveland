@@ -1,8 +1,13 @@
-# 🚌 City Sightseeing Dublin
+# 🚌 Traveland — Dublin sightseeing tours
 
-Booking and marketing site for hop-on hop-off bus tours in Dublin — with bike tours, night
-tours and historical walks. Built with **Next.js (App Router)**, **TypeScript** and
-**Tailwind CSS**, in **6 languages** and **3 currencies**.
+> **Concept redesign.** Built as a proposal for a Dublin hop-on hop-off tour operator running
+> an ageing WordPress site — a working demonstration of what a modern replacement could look
+> like. It led to a real engagement: [Sightseeing Bike Tours](https://github.com/luucassp/City-Sightseeing-Bike-Tours),
+> the site for that operator's new bike-tour line.
+
+Booking and marketing site for hop-on hop-off bus tours — with bike tours, night tours and
+historical walks. Built with **Next.js (App Router)**, **TypeScript** and **Tailwind CSS**,
+in **6 languages** and **3 currencies**.
 
 ![Next.js](https://img.shields.io/badge/Next.js-black?logo=next.js) ![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white) ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38BDF8?logo=tailwindcss&logoColor=white) ![Leaflet](https://img.shields.io/badge/Leaflet-199900?logo=leaflet&logoColor=white)
 
